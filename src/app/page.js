@@ -14,9 +14,9 @@ export default function Home() {
       <Navbar />
       {/* Hero Seection */}
       <Hero />
-      <button className="items-center justify-center py-3 px-8 bg-[#94AF78] fixed bottom-6 right-10 z-50 rounded-full flex flex-row space-x-2 hover:bg-white hover:text-[#6B826F]">
+      <button className="items-center justify-center py-3 px-3 sm:px-8 bg-[#94AF78] fixed bottom-6 right-5 sm:right-10 z-50 rounded-full flex flex-row space-x-2 hover:bg-white hover:text-[#6B826F]">
         <BsFillChatDotsFill className="text-xl" />
-        <span>Talk With Us</span>
+        <span className="hidden sm:block">Talk With Us</span>
       </button>
 
       <About />
