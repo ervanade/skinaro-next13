@@ -35,11 +35,11 @@ export default async function RootLayout({ children }) {
         src="https://www.facebook.com/tr?id=755549682423303&ev=PageView&noscript=1"
         /></noscript>
           `;
-      const data = await getData()
+      // const data = await getData()
   return (
     <html lang="en">
       <head>
-        {parse(data?.data[0].head)}
+        {/* {parse(data?.data[0].head)} */}
         {/* <meta description={data.title} />
         <title>{data.title}</title> */}
       </head>

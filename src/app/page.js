@@ -23,12 +23,13 @@ async function getData() {
 
 
 export default async function Home() {
-  const data = await getData()
+  // const data = await getData()
   return (
     <>
       <Navbar />
       {/* Hero Seection */}
-      <Hero data={data.data[0].hero} />
+      <Hero />
+      {/* <Hero data={data.data[0].hero} /> */}
       <button className="items-center justify-center py-3 px-3 sm:px-8 bg-[#94AF78] fixed bottom-6 right-5 sm:right-10 z-50 rounded-full flex flex-row space-x-2 hover:bg-white hover:text-[#6B826F]">
         <BsFillChatDotsFill className="text-xl" />
         <span className="hidden sm:block">Talk With Us</span>
@@ -47,7 +48,8 @@ export default async function Home() {
         <img src="assets/Icon/Icon-5.png" alt="" className="w-2/6 sm:w-auto sm:max-w-[150px]" />
       </div>
 
-      <Product data={data.data[0].product} />
+      <Product />
+      {/* <Product data={data.data[0].product} /> */}
 
       {/* Section Benefit */}
 
