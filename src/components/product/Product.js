@@ -8,177 +8,179 @@ import {
   BsChevronRight,
 } from "react-icons/bs";
 
-const Product = () => {
-  const productData = [
-    {
-      id: 3,
-      image: "/assets/prod-1.png",
-      name: "Skinaro Tea Brightening Moisturizer Gel",
-      category: "BRIGHTENING CLEANSER",
-      description:
-        "Merupakan krim pelembap pagi & malam dengan tekstur gel yang ringan. Kombinasi Ekstrak Teh dan Squalane membantu meningkatkan hidrasi serta menyamarkan noda hitam. Niacinamide 4% dan Vitamin E membantu mencerahkan serta menutrisi kulit.",
-      ingridients: [
-        {
-          title: "Camellia Sinensis Leaf Extract",
-          dexc: "Merupakan kandungan dengan tinggi antioksidan dapat bantu melindungi kerusakan sel akibat radikal bebas. Sehingga dapat mencegah inflamasi, hingga merawat kesehatan kulit.",
-        },
-        {
-          title: "Niacinamide 4%",
-          dexc: "Kandungan yang dapat membantu mengatasi permasalahan wajah yang kusam dengan membantu mencerahkan kulit, sehingga wajah terlihat lebih sehat tanpa memberikan efek samping. Serta dapat membantu mengatasi permasalahan kulit yang berjerawat.",
-        },
-        {
-          title: "Squalane",
-          dexc: "Bantu meningkatkan hidrasi kulit dan membantu kulit terlihat lebih sehat. Kaya akan antioksidan bisa melawan kerusakan kulit serta radikal bebas, sehingga dapat menunda proses penuaan.",
-        },
-        {
-          title: "Peptide",
-          dexc: "sejenis peptide yang merupakan asam amino, yang berfungsi mendorong proses pembuatan protein, seperti kolagen dan elastin. Yang membantu mengatasi permasalahan kerutan dan kurangnya elastisitas pada wajah",
-        },
-      ],
-      benefit: [
-        {
-          img: "prodDesc1.png",
-          desc: "Brightens with high antioxidant",
-        },
-        {
-          img: "prodDesc3.png",
-          desc: "Natural Calming  TeaScent",
-        },
-        {
-          img: "prodDesc4.png",
-          desc: "Suitable for  most skin types",
-        },
-        {
-          img: "uv.png",
-          desc: "UV- Protection",
-        },
-        {
-          img: "anti-aging.png",
-          desc: "Prevent anti-aging",
-        },
-      ],
-    },
-    {
-      id: 1,
-      image: "prod-4.png",
-      name: "Skinaro Tea Brightening Cleanser",
-      category: "BRIGHTENING CLEANSER",
-      description:
-        "Merupakan pembersih wajah dengan kandungan Ekstrak Teh & Glycolic Acid yang dapat membantu mencerahkan dan membersihkan kulit mati sekaligus menenangkan kulit.",
-      ingridients: [
-        {
-          title: "Camellia Sinensis Leaf Extract",
-          dexc: "Merupakan kandungan dengan tinggi antioksidan dapat bantu melindungi kerusakan sel akibat radikal bebas. Sehingga dapat mencegah inflamasi, hingga merawat kesehatan kulit.",
-        },
-        {
-          title: "Glycolic Acid",
-          dexc: "Merupakan AHA yang bersifat mengeksfoliasi dan juga menarik kelembaban di saat yang bersamaan. Dengan  kandungan anti-bacterial dan anti-oksidan, yang  dapat membantu memperbaiki tekstur kulit, dan juga  memperbaiki skin barrier dengan  membantu produksi kolagen alami kulit. Gunakan pada  malam hari untuk kulit tampak lebih sehat bercahaya di pagi hari. ",
-        },
-        {
-          title: "Hyaluronic Acid",
-          dexc: "Merupakan micronized Hyaluronic  Acid (molekul jauh lebih kecil sehingga lebih mudah diserap kulit), yang menjaga kelembaban alami kulit serta memberikan efek tampilan yang lebih  glowing",
-        },
-      ],
-      benefit: [
-        {
-          img: "prodDesc1.png",
-          desc: "Brightens with high antioxidant",
-        },
-        {
-          img: "prodDesc2.png",
-          desc: "Exfoliate Gently",
-        },
-        {
-          img: "prodDesc3.png",
-          desc: "Natural Calming  TeaScent",
-        },
-        {
-          img: "prodDesc4.png",
-          desc: "Suitable for  most skin types",
-        },
-      ],
-    },
-    {
-      id: 4,
-      image: "serum.jpeg",
-      name: "Skinaro Tea Brightening Serum",
-      category: "BRIGHTENING CLEANSER",
-      description:
-        "Merupakan toner essence dengan tekstur sangat ringan berfungsi untuk menyeimbangkan pH kulit wajah sekaligus mengembalikan kelembapan kulit. mengandung Ekstrak Teh & Niacinamide 2% yang dapat membantu meningkatkan kecerahan dan menjaga barrier kulit wajah.",
-      ingridients: [
-        {
-          title: "Camellia Sinensis Leaf Extract",
-          dexc: "Merupakan kandungan dengan tinggi antioksidan dapat bantu melindungi kerusakan sel akibat radikal bebas. Sehingga dapat mencegah inflamasi, hingga merawat kesehatan kulit.",
-        },
-        {
-          title: "Niacinamide 4%",
-          dexc: "Kandungan yang dapat membantu mengatasi permasalahan wajah yang kusam dengan membantu mencerahkan kulit, sehingga wajah terlihat lebih sehat tanpa memberikan efek samping. Serta dapat membantu mengatasi permasalahan kulit yang berjerawat.",
-        },
-        {
-          title: "Peptide",
-          dexc: "sejenis peptide yang merupakan asam amino, yang berfungsi mendorong proses pembuatan protein, seperti kolagen dan elastin. Yang membantu mengatasi permasalahan kerutan dan kurangnya elastisitas pada wajah",
-        },
-      ],
-      benefit: [
-        {
-          img: "prodDesc1.png",
-          desc: "Brightens with high antioxidant",
-        },
-        {
-          img: "anti-aging.png",
-          desc: "Prevent anti-aging",
-        },
-        {
-          img: "prodDesc3.png",
-          desc: "Natural Calming  TeaScent",
-        },
-        {
-          img: "prodDesc4.png",
-          desc: "Suitable for  most skin types",
-        },
-      ],
-    },
-    {
-      id: 2,
-      image: "toner.jpeg",
-      name: "Skinaro Tea Brightening Essence Toner",
-      category: "BRIGHTENING CLEANSER",
-      description:
-        "Merupakan toner essence dengan tekstur sangat ringan berfungsi untuk menyeimbangkan pH kulit wajah sekaligus mengembalikan kelembapan kulit. mengandung Ekstrak Teh & Niacinamide 2% yang dapat membantu meningkatkan kecerahan dan menjaga barrier kulit wajah.",
-      ingridients: [
-        {
-          title: "Camellia Sinensis Leaf Extract",
-          dexc: "Merupakan kandungan dengan tinggi antioksidan dapat bantu melindungi kerusakan sel akibat radikal bebas. Sehingga dapat mencegah inflamasi, hingga merawat kesehatan kulit.",
-        },
-        {
-          title: "Niacinamide 2%",
-          dexc: "Kandungan yang dapat membantu mengatasi permasalahan wajah yang kusam dengan membantu mencerahkan kulit, sehingga wajah terlihat lebih sehat tanpa memberikan efek samping. Serta dapat membantu mengatasi permasalahan kulit yang berjerawat.",
-        },
-        {
-          title: "Ceramide",
-          dexc: "Bantu mencegah hilangnya kelembaban dan melindungi kulit dari radikal bebas",
-        },
-      ],
-      benefit: [
-        {
-          img: "prodDesc1.png",
-          desc: "Brightens with high antioxidant",
-        },
-        {
-          img: "ph-b.png",
-          desc: "pH Balance",
-        },
-        {
-          img: "prodDesc3.png",
-          desc: "Natural Calming  TeaScent",
-        },
-        {
-          img: "prodDesc4.png",
-          desc: "Suitable for  most skin types",
-        },
-      ],
-    },
-  ];
+const Product = ({data}) => {
+  // const productData = [
+  //   {
+  //     id: 3,
+  //     image: "/assets/prod-1.png",
+  //     name: "Skinaro Tea Brightening Moisturizer Gel",
+  //     category: "BRIGHTENING CLEANSER",
+  //     description:
+  //       "Merupakan krim pelembap pagi & malam dengan tekstur gel yang ringan. Kombinasi Ekstrak Teh dan Squalane membantu meningkatkan hidrasi serta menyamarkan noda hitam. Niacinamide 4% dan Vitamin E membantu mencerahkan serta menutrisi kulit.",
+  //     ingridients: [
+  //       {
+  //         title: "Camellia Sinensis Leaf Extract",
+  //         dexc: "Merupakan kandungan dengan tinggi antioksidan dapat bantu melindungi kerusakan sel akibat radikal bebas. Sehingga dapat mencegah inflamasi, hingga merawat kesehatan kulit.",
+  //       },
+  //       {
+  //         title: "Niacinamide 4%",
+  //         dexc: "Kandungan yang dapat membantu mengatasi permasalahan wajah yang kusam dengan membantu mencerahkan kulit, sehingga wajah terlihat lebih sehat tanpa memberikan efek samping. Serta dapat membantu mengatasi permasalahan kulit yang berjerawat.",
+  //       },
+  //       {
+  //         title: "Squalane",
+  //         dexc: "Bantu meningkatkan hidrasi kulit dan membantu kulit terlihat lebih sehat. Kaya akan antioksidan bisa melawan kerusakan kulit serta radikal bebas, sehingga dapat menunda proses penuaan.",
+  //       },
+  //       {
+  //         title: "Peptide",
+  //         dexc: "sejenis peptide yang merupakan asam amino, yang berfungsi mendorong proses pembuatan protein, seperti kolagen dan elastin. Yang membantu mengatasi permasalahan kerutan dan kurangnya elastisitas pada wajah",
+  //       },
+  //     ],
+  //     benefit: [
+  //       {
+  //         img: "prodDesc1.png",
+  //         desc: "Brightens with high antioxidant",
+  //       },
+  //       {
+  //         img: "prodDesc3.png",
+  //         desc: "Natural Calming  TeaScent",
+  //       },
+  //       {
+  //         img: "prodDesc4.png",
+  //         desc: "Suitable for  most skin types",
+  //       },
+  //       {
+  //         img: "uv.png",
+  //         desc: "UV- Protection",
+  //       },
+  //       {
+  //         img: "anti-aging.png",
+  //         desc: "Prevent anti-aging",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 1,
+  //     image: "prod-4.png",
+  //     name: "Skinaro Tea Brightening Cleanser",
+  //     category: "BRIGHTENING CLEANSER",
+  //     description:
+  //       "Merupakan pembersih wajah dengan kandungan Ekstrak Teh & Glycolic Acid yang dapat membantu mencerahkan dan membersihkan kulit mati sekaligus menenangkan kulit.",
+  //     ingridients: [
+  //       {
+  //         title: "Camellia Sinensis Leaf Extract",
+  //         dexc: "Merupakan kandungan dengan tinggi antioksidan dapat bantu melindungi kerusakan sel akibat radikal bebas. Sehingga dapat mencegah inflamasi, hingga merawat kesehatan kulit.",
+  //       },
+  //       {
+  //         title: "Glycolic Acid",
+  //         dexc: "Merupakan AHA yang bersifat mengeksfoliasi dan juga menarik kelembaban di saat yang bersamaan. Dengan  kandungan anti-bacterial dan anti-oksidan, yang  dapat membantu memperbaiki tekstur kulit, dan juga  memperbaiki skin barrier dengan  membantu produksi kolagen alami kulit. Gunakan pada  malam hari untuk kulit tampak lebih sehat bercahaya di pagi hari. ",
+  //       },
+  //       {
+  //         title: "Hyaluronic Acid",
+  //         dexc: "Merupakan micronized Hyaluronic  Acid (molekul jauh lebih kecil sehingga lebih mudah diserap kulit), yang menjaga kelembaban alami kulit serta memberikan efek tampilan yang lebih  glowing",
+  //       },
+  //     ],
+  //     benefit: [
+  //       {
+  //         img: "prodDesc1.png",
+  //         desc: "Brightens with high antioxidant",
+  //       },
+  //       {
+  //         img: "prodDesc2.png",
+  //         desc: "Exfoliate Gently",
+  //       },
+  //       {
+  //         img: "prodDesc3.png",
+  //         desc: "Natural Calming  TeaScent",
+  //       },
+  //       {
+  //         img: "prodDesc4.png",
+  //         desc: "Suitable for  most skin types",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 4,
+  //     image: "serum.jpeg",
+  //     name: "Skinaro Tea Brightening Serum",
+  //     category: "BRIGHTENING CLEANSER",
+  //     description:
+  //       "Merupakan toner essence dengan tekstur sangat ringan berfungsi untuk menyeimbangkan pH kulit wajah sekaligus mengembalikan kelembapan kulit. mengandung Ekstrak Teh & Niacinamide 2% yang dapat membantu meningkatkan kecerahan dan menjaga barrier kulit wajah.",
+  //     ingridients: [
+  //       {
+  //         title: "Camellia Sinensis Leaf Extract",
+  //         dexc: "Merupakan kandungan dengan tinggi antioksidan dapat bantu melindungi kerusakan sel akibat radikal bebas. Sehingga dapat mencegah inflamasi, hingga merawat kesehatan kulit.",
+  //       },
+  //       {
+  //         title: "Niacinamide 4%",
+  //         dexc: "Kandungan yang dapat membantu mengatasi permasalahan wajah yang kusam dengan membantu mencerahkan kulit, sehingga wajah terlihat lebih sehat tanpa memberikan efek samping. Serta dapat membantu mengatasi permasalahan kulit yang berjerawat.",
+  //       },
+  //       {
+  //         title: "Peptide",
+  //         dexc: "sejenis peptide yang merupakan asam amino, yang berfungsi mendorong proses pembuatan protein, seperti kolagen dan elastin. Yang membantu mengatasi permasalahan kerutan dan kurangnya elastisitas pada wajah",
+  //       },
+  //     ],
+  //     benefit: [
+  //       {
+  //         img: "prodDesc1.png",
+  //         desc: "Brightens with high antioxidant",
+  //       },
+  //       {
+  //         img: "anti-aging.png",
+  //         desc: "Prevent anti-aging",
+  //       },
+  //       {
+  //         img: "prodDesc3.png",
+  //         desc: "Natural Calming  TeaScent",
+  //       },
+  //       {
+  //         img: "prodDesc4.png",
+  //         desc: "Suitable for  most skin types",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     image: "toner.jpeg",
+  //     name: "Skinaro Tea Brightening Essence Toner",
+  //     category: "BRIGHTENING CLEANSER",
+  //     description:
+  //       "Merupakan toner essence dengan tekstur sangat ringan berfungsi untuk menyeimbangkan pH kulit wajah sekaligus mengembalikan kelembapan kulit. mengandung Ekstrak Teh & Niacinamide 2% yang dapat membantu meningkatkan kecerahan dan menjaga barrier kulit wajah.",
+  //     ingridients: [
+  //       {
+  //         title: "Camellia Sinensis Leaf Extract",
+  //         dexc: "Merupakan kandungan dengan tinggi antioksidan dapat bantu melindungi kerusakan sel akibat radikal bebas. Sehingga dapat mencegah inflamasi, hingga merawat kesehatan kulit.",
+  //       },
+  //       {
+  //         title: "Niacinamide 2%",
+  //         dexc: "Kandungan yang dapat membantu mengatasi permasalahan wajah yang kusam dengan membantu mencerahkan kulit, sehingga wajah terlihat lebih sehat tanpa memberikan efek samping. Serta dapat membantu mengatasi permasalahan kulit yang berjerawat.",
+  //       },
+  //       {
+  //         title: "Ceramide",
+  //         dexc: "Bantu mencegah hilangnya kelembaban dan melindungi kulit dari radikal bebas",
+  //       },
+  //     ],
+  //     benefit: [
+  //       {
+  //         img: "prodDesc1.png",
+  //         desc: "Brightens with high antioxidant",
+  //       },
+  //       {
+  //         img: "ph-b.png",
+  //         desc: "pH Balance",
+  //       },
+  //       {
+  //         img: "prodDesc3.png",
+  //         desc: "Natural Calming  TeaScent",
+  //       },
+  //       {
+  //         img: "prodDesc4.png",
+  //         desc: "Suitable for  most skin types",
+  //       },
+  //     ],
+  //   },
+  // ];
+  const productData = data ? data : []
+  // console.log(data)
   const [slider, setSlider] = useState(0);
   const [productDesc, setProductDesc] = useState("about");
 

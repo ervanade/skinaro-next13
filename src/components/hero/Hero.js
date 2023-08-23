@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
-const Hero = () => {
+const Hero = ({data}) => {
   const sliderItem = [
     { id: 1, image: 'hero-skinaro.png' },
     { id: 2, image: 'bg-1-skinaro.jpg' },

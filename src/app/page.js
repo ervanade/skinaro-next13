@@ -8,12 +8,27 @@ import Benefit from '@/components/benefit/Benefit'
 import Contact from '@/components/contact/Contact'
 import Footer from '@/components/footer/Footer'
 
-export default function Home() {
+async function getData() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_TEST}/settings`, {cache: 'no-store'})
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+ 
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res.json()
+}
+
+
+export default async function Home() {
+  const data = await getData()
   return (
     <>
       <Navbar />
       {/* Hero Seection */}
-      <Hero />
+      <Hero data={data.data[0].hero} />
       <button className="items-center justify-center py-3 px-3 sm:px-8 bg-[#94AF78] fixed bottom-6 right-5 sm:right-10 z-50 rounded-full flex flex-row space-x-2 hover:bg-white hover:text-[#6B826F]">
         <BsFillChatDotsFill className="text-xl" />
         <span className="hidden sm:block">Talk With Us</span>
@@ -32,7 +47,7 @@ export default function Home() {
         <img src="assets/Icon/Icon-5.png" alt="" className="w-2/6 sm:w-auto sm:max-w-[150px]" />
       </div>
 
-      <Product />
+      <Product data={data.data[0].product} />
 
       {/* Section Benefit */}
 

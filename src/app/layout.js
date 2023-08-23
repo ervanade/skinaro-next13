@@ -39,16 +39,16 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {parse(scriptString)}
-        <meta description={data.title} />
-        <title>{data.title}</title>
+        {parse(data?.data[0].head)}
+        {/* <meta description={data.title} />
+        <title>{data.title}</title> */}
       </head>
       <body>{children}</body>
     </html>
   )
 }
 async function getData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts/1', { next: {revalidate: 36000}})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_TEST}/settings`, { next: {revalidate: 36000}})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
