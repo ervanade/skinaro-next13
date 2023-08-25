@@ -383,7 +383,11 @@ const Product = ({data}) => {
         <div className="description text-gray-700 transition-all duration-300">
 
         {
-          parse(data[slider].overview_desc)
+          productDesc === "about" ?
+          data[slider].overview_desc ? parse(data[slider].overview_desc) : ""
+          : productDesc === "how" ? data[slider].how_to_use ? parse(data[slider].how_to_use) : ""
+          : productDesc === "ingridients" ? data[slider].ingridients ? parse(data[slider].ingridients) : ""
+          : ""
         }
           </div>
           <div className="deskripsi text-gray-700 transition-all duration-300">
