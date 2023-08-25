@@ -43,3 +43,14 @@ body {
 .font-luxyna {
   font-family: "Luxyna" !important;
 }
+
+.description strong {
+  font-family: "Luxyna";
+  color: black !important;
+  font-size: 24px;
+}
+
+.description p {
+  font-size: 14px;
+  font-family: "Montserrat";
+}

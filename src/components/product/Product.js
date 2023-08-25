@@ -380,6 +380,12 @@ const Product = ({data}) => {
           </>
           : null  
         } */}
+        <div className="description text-gray-700 transition-all duration-300">
+
+        {
+          parse(data[slider].overview_desc)
+        }
+          </div>
           <div className="deskripsi text-gray-700 transition-all duration-300">
             <p className="font-semibold text-2xl text-black font-luxyna">Description : </p>
             <p className="font-light text-black text-sm">{productData[slider].description}</p>
