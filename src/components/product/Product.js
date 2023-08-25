@@ -390,7 +390,8 @@ const Product = ({data}) => {
           : ""
         }
           </div>
-          <div className="deskripsi text-gray-700 transition-all duration-300">
+
+          {/* <div className="deskripsi text-gray-700 transition-all duration-300">
             <p className="font-semibold text-2xl text-black font-luxyna">Description : </p>
             <p className="font-light text-black text-sm">{productData[slider].description}</p>
           </div>
@@ -422,7 +423,7 @@ const Product = ({data}) => {
               ))
             }
 
-          </div>
+          </div> */}
 
           <div className="flex place-items-end self-end my-5">
             <a href={data[slider].link || "https://shopee.co.id/skinaroofficial"} className="items-center justify-center py-3 px-8 text-white bg-[#FC7F66] rounded-xl flex flex-row space-x-2 hover:bg-white hover:text-[#FC7F66] border hover:border-[#FC7F66] transition-all duration-200">
