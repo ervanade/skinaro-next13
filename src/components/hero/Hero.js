@@ -30,31 +30,34 @@ const Hero = ({data}) => {
 
 
   return (
-    <div className="hero relative w-screen h-auto overflow-hidden pt-16 md:pt-8 lg:pt-0" id="hero">
+    <div className="hero relative w-screen h-auto overflow-hidden pt-0 md:pt-0 lg:pt-0" id="hero">
       {/* <div className="overlay w-full h-full absolute top-0 left-0 bg-black bg-opacity-20 z-[2]"></div> */}
-      <div className="mx-auto w-full h-full ">
+      <div className="mx-auto w-full h-full hidden md:block">
         <Slider {...settings}>
           <div>
             <img src="assets/hero/hero-bg-4.png" alt="Slide 1" className="w-full" />
           </div>
           <div>
-            <img src="assets/hero/hero-bg-4.png" alt="Slide 2" className="w-full" />
+            <img src="assets/hero/hero-banner-desktop.jpg" alt="Slide 2" className="w-full" />
           </div>
           {/* <div>
           <img src="assets/hero/hero-bg-mobile-1.png" alt="Slide 3" className="w-full" />
         </div> */}
         </Slider>
       </div>
-      {/* <div className="mx-auto w-full h-full md:hidden">
+      <div className="mx-auto w-full h-full md:hidden">
       <Slider {...settings}>
         <div>
-          <img src="assets/hero/hero-bg-mobile-1.png" alt="Slide 3" className="w-full" />
+          <img src="assets/hero/hero-mobile.png" alt="Slide 3" className="w-full" />
         </div>
         <div>
-          <img src="assets/hero/hero-bg-mobile-1.png" alt="Slide 3" className="w-full" />
+          <img src="assets/hero/hero-banner-mobile.jpg" alt="Slide 3" className="w-full" />
         </div>
+        {/* <div>
+          <img src="assets/hero/hero-mobile-size2.png" alt="Slide 3" className="w-full" />
+        </div> */}
       </Slider>
-    </div> */}
+    </div>
       {/* <img src="assets/hero/hero-bg-3.png" alt="" className="w-full hidden sm:block" />
       <img src="assets/hero/hero-bg-mobile-1.png" alt="" className="w-full sm:hidden" /> */}
 

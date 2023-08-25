@@ -7,9 +7,10 @@ import Product from '@/components/product/Product'
 import Benefit from '@/components/benefit/Benefit'
 import Contact from '@/components/contact/Contact'
 import Footer from '@/components/footer/Footer'
+import Modal from '@/components/modal/Modal'
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_TEST}/settings`, {cache: 'no-store'})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, {cache: 'no-store'})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
@@ -23,10 +24,11 @@ async function getData() {
 
 
 export default async function Home() {
-  // const data = await getData()
+  const {data} = await getData()
   return (
     <>
       <Navbar />
+      <Modal />
       {/* Hero Seection */}
       <Hero />
       {/* <Hero data={data.data[0].hero} /> */}
@@ -35,7 +37,7 @@ export default async function Home() {
         <span className="hidden sm:block">Talk With Us</span>
       </button>
 
-      <About />
+      <About data={data?.section[0]} />
 
 
 
@@ -48,7 +50,7 @@ export default async function Home() {
         <img src="assets/Icon/Icon-5.png" alt="" className="w-2/6 sm:w-auto sm:max-w-[150px]" />
       </div>
 
-      <Product />
+      <Product data={data.product} />
       {/* <Product data={data.data[0].product} /> */}
 
       {/* Section Benefit */}
@@ -88,7 +90,7 @@ export default async function Home() {
           </div>
         </div>
       </div> */}
-      <Benefit />
+      <Benefit data={data.section} />
 
 
       {/* Section Contact */}

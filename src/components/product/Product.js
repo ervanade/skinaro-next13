@@ -179,8 +179,7 @@ const Product = ({data}) => {
       ],
     },
   ];
-  // const productData = data ? data : []
-  // console.log(data)
+  console.log(data)
   const [slider, setSlider] = useState(0);
   const [productDesc, setProductDesc] = useState("about");
 

@@ -3,10 +3,10 @@ import { Inter } from 'next/font/google'
 import parse from 'html-react-parser';
 
 
-// export const metadata = {
-//   title: 'Skinaro - Beauty Aro Tea Skin Care',
-//   description: 'Skinaro - Beauty Aro Tea Skin Care',
-// }
+export const metadata = {
+  title: 'Skinaro - Beauty Aro Tea Skin Care',
+  description: 'Skinaro - Beauty Aro Tea Skin Care',
+}
 
 export default async function RootLayout({ children }) {
   const scriptString = `<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=DC-10827733&amp;l=dataLayer&amp;cx=c"></script>
@@ -35,11 +35,13 @@ export default async function RootLayout({ children }) {
         src="https://www.facebook.com/tr?id=755549682423303&ev=PageView&noscript=1"
         /></noscript>
           `;
-      // const data = await getData()
+      const {data} = await getData()
+
   return (
     <html lang="en">
       <head>
-        {/* {parse(data?.data[0].head)} */}
+        {parse(data?.setting.head_script)}
+        <link rel="icon" href="/favicon-skinaro.png" />
         {/* <meta description={data.title} />
         <title>{data.title}</title> */}
       </head>
@@ -48,7 +50,7 @@ export default async function RootLayout({ children }) {
   )
 }
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_TEST}/settings`, { next: {revalidate: 36000}})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: {revalidate: 36000}})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
