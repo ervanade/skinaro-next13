@@ -7,6 +7,7 @@ import {
   BsChevronLeft,
   BsChevronRight,
 } from "react-icons/bs";
+import parse from 'html-react-parser';
 
 const Product = ({data}) => {
   const productData = [
@@ -284,7 +285,7 @@ const Product = ({data}) => {
             className="absolute top-0 -left-12 md:block hidden"
           />
           <h1 className="text-3xl lg:text-5xl font-luxyna text-[black] self-start transition-all duration-300">
-            {productData[slider].name}
+            {data[slider].overview_title || productData[slider].name}
           </h1>
           <div className="tab justify-start self-start py-2">
             <div className="tab-header flex gap-2">
