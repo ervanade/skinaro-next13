@@ -386,7 +386,7 @@ const Product = ({data}) => {
           productDesc === "about" ?
           data[slider].overview_desc ? parse(data[slider].overview_desc) : ""
           : productDesc === "how" ? data[slider].how_to_use ? parse(data[slider].how_to_use) : ""
-          : productDesc === "ingridients" ? data[slider].ingridients ? parse(data[slider].ingridients) : ""
+          : productDesc === "ingridients" ? data[slider].ingredients ? parse(data[slider].ingredients) : ""
           : ""
         }
           </div>
