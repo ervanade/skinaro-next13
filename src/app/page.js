@@ -97,7 +97,7 @@ export default async function Home() {
 
       <Contact />
       {/* Section Footer */}
-      <Footer />
+      <Footer data={data.setting} />
     </>
   )
 }

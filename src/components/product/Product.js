@@ -179,7 +179,6 @@ const Product = ({data}) => {
       ],
     },
   ];
-  console.log(data)
   const [slider, setSlider] = useState(0);
   const [productDesc, setProductDesc] = useState("about");
 
@@ -230,13 +229,18 @@ const Product = ({data}) => {
         <div className="next-arrow"></div>
         <div className="image w-full flex flex-col gap-4">
           {/* <div className="image h-[350px] md:h-[450px] md:w-1/2 flex justify-center items-center self-center p-12 md:p-16" > */}
-
+          {data[slider].main_image[0].image_default ? 
           <div
-            className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
-            style={{ backgroundImage: `url(${productData[slider].image})` }}
-          >
-            {/* <img src={item.image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
-          </div>
+          className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
+          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default})` }}
+        >
+          {/* <img src={item.image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
+        </div> : <div
+          className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
+          style={{ backgroundImage: `url(${productData[slider].image})` }}
+        ></div> 
+        }
+         
 
           {/* <img src={productData[slider].image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
           {/* </div> */}
@@ -410,9 +414,9 @@ const Product = ({data}) => {
           </div>
 
           <div className="flex place-items-end self-end my-5">
-            <button className="items-center justify-center py-3 px-8 text-white bg-[#FC7F66] rounded-xl flex flex-row space-x-2 hover:bg-white hover:text-[#FC7F66] border hover:border-[#FC7F66] transition-all duration-200">
+            <a href={data[slider].link || "https://shopee.co.id/skinaroofficial"} className="items-center justify-center py-3 px-8 text-white bg-[#FC7F66] rounded-xl flex flex-row space-x-2 hover:bg-white hover:text-[#FC7F66] border hover:border-[#FC7F66] transition-all duration-200">
               <BsCart className="text-xl" /> <span>Shop Now</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
