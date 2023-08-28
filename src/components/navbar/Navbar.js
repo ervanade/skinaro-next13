@@ -34,7 +34,7 @@ const Navbar = () => {
   ]
   return (
     <div
-      className={`${color ? "bg-white text-[#6B826F] shadow-md" : ""
+      className={`${color ? "!bg-white text-[#6B826F] shadow-md" : ""
         } navbar-fixed fixed top-0 left-0 w-full z-50`}
     >
       <div className="container mx-auto max-w-7xl px-6 md:px-10 lg:px-24 py-4 flex justify-between items-center">

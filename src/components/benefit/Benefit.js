@@ -28,7 +28,7 @@ const Benefit = ({data}) => {
         </div>
         <div className="flex flex-col-reverse gap-3 sm:gap-6 w-full md:relative">
           <div className="image w-full md:h-[300px] lg:h-[400px] border-lg md:absolute md:top-0 md:-left-[72px]">
-            <img src={"assets/benefit-1.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" />
+            <img src={data[1].image_default || "assets/benefit-1.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" />
             {/* <img src={data[1].image_default || "assets/benefit-1.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" /> */}
           </div>
           <div className="description flex flex-col gap-2 sm:gap-4 md:list-disc text-black font-light text-sm sm:text-base">
