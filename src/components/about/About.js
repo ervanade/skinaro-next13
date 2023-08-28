@@ -24,7 +24,7 @@ const About = ({data}) => {
             {parse(data.content) || "Apart from spices to coffee, Indonesia is also famous as the best black tea exporter in the world. One of the best known is Kayu Aro Black Tea. Kayu Aro Tea is the best in terms of quality because the production process is still very traditional so that the taste of the tea is maintained. Not surprisingly, this tea, which has a strong aroma, is said to be a favorite of world royalty. From Queen Elizabeth in England to Queen Wilhelmina, Queen Juliana and Queen Beatrix in the Netherlands."}
           </div>
           <div>
-            <a href={data.link || "https://shopee.co.id/skinaroofficial"} className="px-8 py-3 transition-all duration-200 bg-[#FC7F66] rounded-lg hover:bg-white hover:text-[#FC7F66] border hover:border-[#FC7F66]">
+            <a href={data.link || "https://shopee.co.id/skinaroofficial"} target="_blank" className="px-8 py-3 transition-all duration-200 bg-[#FC7F66] rounded-lg hover:bg-white hover:text-[#FC7F66] border hover:border-[#FC7F66]">
               Shop Now
             </a>
           </div>

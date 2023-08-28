@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 const Navbar = () => {
@@ -13,6 +13,22 @@ const Navbar = () => {
   const buttonOnChangeClose = () => {
     setMenuButton(false)
   }
+  useEffect(() => {
+    const changeColor = () => {
+      if (typeof window !== "undefined") {
+        // Client-side-only code
+        if (window.scrollY > 5) {
+          setColor(true);
+        } else {
+          setColor(false);
+        }
+      }
+    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", changeColor);
+    }
+  }, [])
+  
   const changeColor = () => {
     if (typeof window !== "undefined") {
       // Client-side-only code

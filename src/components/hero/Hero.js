@@ -41,7 +41,10 @@ const Hero = ({data}) => {
         <Slider {...settings}>
           {data ? data.map((item) => (
             <div key={item.id}>
+              <a href="https://shopee.co.id/skinaroofficial" target="_blank">
+
               <img src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_default}` || "assets/hero/hero-bg-4.png"} alt="Banner Skinaro" className="w-full" />
+              </a>
             </div>
           )) : ""}
           {/* <div>
@@ -59,7 +62,10 @@ const Hero = ({data}) => {
       <Slider {...settings}>
         {data ? data.map((item) => (
             <div key={item.id}>
+              <a href="https://shopee.co.id/skinaroofficial" target="_blank">
               <img src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_mobile}` || "assets/hero/hero-mobile.png"} alt="Banner Skinaro" className="w-full" />
+              </a>
+            
             </div>
           )) : ""}
         {/* <div>
