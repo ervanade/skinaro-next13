@@ -9,7 +9,7 @@ const Modal = () => {
         <div className={`overlay w-screen h-screen absolute top-0 left-0 bg-black bg-opacity-20 z-[2] transition-all duration-300 ${openModal ? "block" : "hidden"} `} onClick={() => setOpenModal(false)}></div>
         <div className="modal-wrapper transition-all duration-300 w-full max-w-lg bg-white p-6 h-max relative flex items-center justify-center shadow-md rounded-lg z-10">
             <div className="close-button absolute text-orange-500 right-1 top-2 cursor-pointer" onClick={() => setOpenModal(false)}>
-                <AiFillCloseCircle className='text-xl'/>
+                <AiFillCloseCircle className='text-2xl'/>
             </div>
             <div className="image-wrapper w-full h-full flex items-center justify-center cursor-pointer">
                 <img src="/assets/hero/hero-bg-4.png" alt="Popup Skinaro" className='w-full'/>
