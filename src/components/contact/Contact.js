@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import axios from 'axios'
-import toast, { Toaster } from 'react-hot-toast';
 import Swal from 'sweetalert2'
 
 const Contact = () => {

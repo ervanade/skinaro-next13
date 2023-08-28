@@ -11,9 +11,12 @@ const About = ({data}) => {
       <Image src={"/assets/leaf-orange.png"} width={244} height={359} className='absolute top-0 right-0 w-24 h-32 lg:w-36 lg:h-48 xl:w-48 xl:h-64' alt="Leaf Orange" />
       <div className="relative container mx-auto max-w-7xl gap-10 px-6 md:px-10 lg:px-24 flex justify-center flex-col md:flex-row ">
       <div className="left-about w-full object-cover relative">
-      <h1 className="font-luxyna text-black absolute -top-7 left-16 text-5xl md:text-7xl">{data?.title || "Why Aro?"}</h1>
+      <h1 className="font-luxyna text-black absolute -top-7 left-16 text-5xl md:text-7xl z-[1]">{data?.title || "Why Aro?"}</h1>
         <img src="assets/about-img.png" alt="Skinaro" className="w-full h-full object-cover px-6 md:px-0" />
-        
+        {/* <div className="img-about w-full h-full relative">
+        <Image src={"/assets/about-img.png"} alt='Skinaro' layout='fill'
+    objectFit='contain' className='px-6 md:px-0 object-cover' />
+        </div> */}
       </div>
       <div className="right-about flex flex-col justify-center px-6 w-full">
         <div className="about-description py-8 space-y-8 sm:space-y-14">
