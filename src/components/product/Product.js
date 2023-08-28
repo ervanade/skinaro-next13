@@ -308,7 +308,7 @@ const Product = ({data}) => {
                 onClick={() => setProductDesc("ingridients")}
                 className={` ${productDesc === "ingridients" ? "bg-[#D9D9D9] text-black" : "bg-[#5F8171] text-white"} font-luxyna px-6 text-sm xs:text-base xs:px-8 py-3 xs:py-2 shadow-sm transition-all duration-300 rounded-xl hover:bg-[#D9D9D9] hover:text-black`}
               >
-                Ingridients
+                Ingredients
               </button>
             </div>
           </div>

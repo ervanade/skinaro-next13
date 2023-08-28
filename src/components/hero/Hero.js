@@ -27,11 +27,10 @@ const Hero = ({data}) => {
     slidesToShow: 1,  // Jumlah slide yang ditampilkan sekaligus
     slidesToScroll: 1 // Jumlah slide yang di-scroll sekaligus
   };
-
   if(!data) {
     return (
-      <h1 className="text-gray-700 font-luxyna">
-        Data Not Found
+      <h1 className="text-gray-700 font-luxyna text-center">
+        Data Hero Not Found
       </h1>
     )
   }
