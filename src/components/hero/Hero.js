@@ -28,7 +28,13 @@ const Hero = ({data}) => {
     slidesToScroll: 1 // Jumlah slide yang di-scroll sekaligus
   };
 
-
+  if(!data) {
+    return (
+      <h1 className="text-gray-700 font-luxyna">
+        Data Not Found
+      </h1>
+    )
+  }
   return (
     <div className="hero relative w-screen h-auto overflow-hidden pt-0 md:pt-0 lg:pt-0" id="hero">
       {/* <div className="overlay w-full h-full absolute top-0 left-0 bg-black bg-opacity-20 z-[2]"></div> */}
