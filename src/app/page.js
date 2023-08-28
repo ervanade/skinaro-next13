@@ -18,7 +18,7 @@ async function getData() {
     // This will activate the closest `error.js` Error Boundary
     return (
           <h1 className="text-gray-700 font-luxyna text-center">
-            Something Went Wrong With API !!!
+            Something Went Wrong With Data !!!
           </h1>
     )
   }
@@ -32,7 +32,7 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <Modal />
+      <Modal data={data?.banner} />
       {/* Hero Seection */}
       <Hero data={data?.banner} />
       {/* <Hero data={data.data[0].hero} /> */}
@@ -54,15 +54,15 @@ export default async function Home() {
         <img src="assets/Icon/Icon-5.png" alt="Skinaro Ingridients" className="w-2/6 sm:w-auto sm:max-w-[150px]" />
       </div>
 
-      <Product data={data.product} />
-      <Benefit data={data.section} />
+      <Product data={data?.product} />
+      <Benefit data={data?.section} />
 
 
       {/* Section Contact */}
 
       <Contact />
       {/* Section Footer */}
-      <Footer data={data.setting} />
+      <Footer data={data?.setting} />
     </>
   )
 }
