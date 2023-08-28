@@ -10,6 +10,7 @@ const Contact = () => {
     email: "",
     message: ""
   })
+  const [loading, setLoading] = useState(false)
   const data = JSON.stringify({
     "email": form.email,
     "phone": form.phone,
@@ -21,6 +22,7 @@ const Contact = () => {
 });
   const fetchApiPostContact = async (e) => {
     e.preventDefault()
+    setLoading(true)
     await axios({
       method: 'post',
       url: `${process.env.NEXT_PUBLIC_APP_API_KEY}/contact`,
@@ -37,6 +39,7 @@ const Contact = () => {
           'Thank You For Your Message!',
           'success'
           )
+          setLoading(false)
           // toast.success('Thanks For Registering', {
             //   duration:3000
             // })
@@ -50,6 +53,7 @@ const Contact = () => {
       })
       .catch((error) => {
         console.log(error)
+        setLoading(false)
       })
   }
   const handleChangeForm = (e) => {
@@ -65,13 +69,13 @@ const Contact = () => {
             <div className="form-top flex justify-center md:items-center  gap-4 md:gap-6 lg:gap-8 md:flex-row flex-col">
               <div className="name flex w-full flex-col gap-5"><label htmlFor="name" className="text-base sm:text-xl font-luxyna tracking-[4px]">Your Name</label> <input required type="text" className="px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 text-sm rounded-lg !focus:none block w-full p-2.5 focus:border-none focus:ring-0 focus:outline-none" name="name" onChange={handleChangeForm} value={form.name} placeholder="Type Your Name" /></div>
               <div className="name flex w-full flex-col gap-5"><label htmlFor="name" className="text-base sm:text-xl font-luxyna tracking-[4px]">Phone Number</label> <input required type="text" className="px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 text-sm rounded-lg focus:none block w-full p-2.5 focus:outline-none" name="phone" onChange={handleChangeForm} value={form.phone} placeholder="Type Your Phone Number" /></div>
-              <div className="name flex w-full flex-col gap-5"><label htmlFor="name" className="text-base sm:text-xl font-luxyna tracking-[4px]">Email</label> <input required type="text" className="px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 text-sm rounded-lg focus:none block w-full p-2.5 focus:outline-none" name="email" onChange={handleChangeForm} value={form.email} placeholder="Type Your Email" /></div>
+              <div className="name flex w-full flex-col gap-5"><label htmlFor="name" className="text-base sm:text-xl font-luxyna tracking-[4px]">Email</label> <input required type="email" className="px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 text-sm rounded-lg focus:none block w-full p-2.5 focus:outline-none" name="email" onChange={handleChangeForm} value={form.email} placeholder="Type Your Email" /></div>
             </div>
             <div className="form-bottom">
               <div className="name flex flex-col gap-5"><textarea required id="message" rows="4" className="px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-green-800 focus:border-greenring-green-800 block w-full p-2.5 focus:outline-none" name="message" onChange={handleChangeForm} value={form.message} placeholder="Type Your Message" /></div>
             </div>
             <div className="justify-center items-center w-full flex">
-              <button type='submit' className="px-20 py-3 bg-[#FC7F66] rounded-xl lg:mt-6 hover:bg-white hover:text-[#FC7F66] transition-all duration-200">
+              <button type='submit' disabled={loading} className="px-20 py-3 bg-[#FC7F66] rounded-xl lg:mt-6 hover:bg-white hover:text-[#FC7F66] transition-all duration-200">
                 Send
               </button>
             </div>

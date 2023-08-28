@@ -32,7 +32,7 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <Modal data={data?.banner} />
+      <Modal data={data?.banner[0]} />
       {/* Hero Seection */}
       <Hero data={data?.banner} />
       {/* <Hero data={data.data[0].hero} /> */}

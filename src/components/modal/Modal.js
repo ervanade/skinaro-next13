@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 
-const Modal = () => {
+const Modal = ({data}) => {
     const [openModal, setOpenModal] = useState(true)
   return (
     <div className={`${!openModal ? "hidden" : ''} text-gray-700 fixed flex items-center justify-center w-screen h-screen top-0 z-50 p-6  transition-all duration-300 shadow-md`}>
@@ -12,7 +12,7 @@ const Modal = () => {
                 <AiFillCloseCircle className='text-2xl'/>
             </div>
             <div className="image-wrapper w-full h-full flex items-center justify-center cursor-pointer">
-                <img src="/assets/hero/hero-bg-4.png" alt="Popup Skinaro" className='w-full'/>
+                <img src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data.image_popup}` || "/assets/hero/hero-bg-4.png"} alt="Popup Skinaro" className='w-full'/>
             </div>
         </div>
     </div>
