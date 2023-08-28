@@ -10,7 +10,7 @@ import Footer from '@/components/footer/Footer'
 import Modal from '@/components/modal/Modal'
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, {cache: 'no-store'})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: {revalidate: 2}})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
