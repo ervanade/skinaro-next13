@@ -34,12 +34,17 @@ const Hero = ({data}) => {
       {/* <div className="overlay w-full h-full absolute top-0 left-0 bg-black bg-opacity-20 z-[2]"></div> */}
       <div className="mx-auto w-full h-full hidden md:block">
         <Slider {...settings}>
-          <div>
-            <img src="assets/hero/hero-bg-4.png" alt="Slide 1" className="w-full" />
+          {data ? data.map((item) => (
+            <div key={item.id}>
+              <img src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_default}` || "assets/hero/hero-bg-4.png"} alt="Banner Skinaro" className="w-full" />
+            </div>
+          )) : ""}
+          {/* <div>
+            <img src={"assets/hero/hero-bg-4.png"} alt="Slide 1" className="w-full" />
           </div>
           <div>
             <img src="assets/hero/hero-banner-desktop.jpg" alt="Slide 2" className="w-full" />
-          </div>
+          </div> */}
           {/* <div>
           <img src="assets/hero/hero-bg-mobile-1.png" alt="Slide 3" className="w-full" />
         </div> */}
@@ -47,12 +52,17 @@ const Hero = ({data}) => {
       </div>
       <div className="mx-auto w-full h-full md:hidden">
       <Slider {...settings}>
-        <div>
+        {data ? data.map((item) => (
+            <div key={item.id}>
+              <img src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_mobile}` || "assets/hero/hero-mobile.png"} alt="Banner Skinaro" className="w-full" />
+            </div>
+          )) : ""}
+        {/* <div>
           <img src="assets/hero/hero-mobile.png" alt="Slide 3" className="w-full" />
         </div>
         <div>
           <img src="assets/hero/hero-banner-mobile.jpg" alt="Slide 3" className="w-full" />
-        </div>
+        </div> */}
         {/* <div>
           <img src="assets/hero/hero-mobile-size2.png" alt="Slide 3" className="w-full" />
         </div> */}

@@ -45,7 +45,10 @@ export default async function RootLayout({ children }) {
         {/* <meta description={data.title} />
         <title>{data.title}</title> */}
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        {parse(data?.setting.body_script)}
+      </body>
     </html>
   )
 }

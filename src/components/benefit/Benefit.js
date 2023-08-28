@@ -6,12 +6,12 @@ const Benefit = ({data}) => {
   return (
     <div className="arotea w-full md:mb-16 relative py-8 md:pb-24 bg-cover bg-no-repeat" >
 
-      <Image src={"/assets/leaf-orange-2.png"} width={139} height={122} className='absolute bottom-0 right-5 md:block hidden' />
-      <Image src={"/assets/Vector.png"} width={24} height={24} className='absolute bottom-3 right-48 md:block hidden' />
+      <Image src={"/assets/leaf-orange-2.png"} width={139} height={122} className='absolute bottom-0 right-5 md:block hidden' alt='Leaf Skinaro' />
+      <Image src={"/assets/Vector.png"} width={24} height={24} className='absolute bottom-3 right-48 md:block hidden' alt='Leaf Skinaro' />
 
 
       <div className="container mx-auto max-w-7xl gap-10 px-6 md:px-10 lg:px-24 flex justify-center flex-col md:flex-row relative ">
-        <Image src={"/assets/Vector.png"} width={32} height={32} className='absolute bottom-5 left-0 lg:left-5 md:block hidden' />
+        <Image src={"/assets/Vector.png"} width={32} height={32} className='absolute bottom-5 left-0 lg:left-5 md:block hidden' alt='Leaf Skinaro' />
         <div className="flex flex-col gap-3 sm:gap-6 w-full">
           <div className="description flex flex-col gap-2 sm:gap-4">
             <h1 className="text-black font-luxyna  text-xl sm:text-3xl">

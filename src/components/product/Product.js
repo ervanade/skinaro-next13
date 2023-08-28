@@ -204,12 +204,14 @@ const Product = ({data}) => {
         width={180}
         height={190}
         className="absolute top-0 md:top-3 left-0 md:left-10 lg:w-[160px] lg:h-[170px] w-20 h-20 sm:w-24 sm:h-24"
+        alt="Leaf Orange"
       />
       <Image
         src={"/assets/product/star-prod.png"}
         width={76}
         height={50}
         className="absolute bottom-5 right-12 md:block hidden"
+        alt="Leaf Orange"
       />
       <h1 className="font-luxyna text-black text-center mb-16 text-4xl md:text-7xl">
         Our Product
@@ -283,6 +285,7 @@ const Product = ({data}) => {
             width={24}
             height={24}
             className="absolute top-0 -left-12 md:block hidden"
+            alt="Star Skinaro"
           />
           <h1 className="text-3xl lg:text-5xl font-luxyna text-[black] self-start transition-all duration-300">
             {data[slider].overview_title || productData[slider].name}

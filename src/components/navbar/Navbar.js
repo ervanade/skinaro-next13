@@ -26,6 +26,7 @@ const Navbar = () => {
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", changeColor);
   }
+  
   const navbarMenu = [
     { id: 1, name: "Home", link: "#hero" },
     { id: 2, name: "Why Aro ?", link: "#why-aro" },
@@ -40,9 +41,9 @@ const Navbar = () => {
       <div className="container mx-auto max-w-7xl px-6 md:px-10 lg:px-24 py-4 flex justify-between items-center">
         <div className="left-navbar">
           {color ? (
-            <img src="/logo-hitam.png" alt="" className="w-28 h-10 md:w-44 md:h-14" />
+            <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-44 md:h-14" />
           ) : (
-            <img src="/logo-hitam.png" alt="" className="w-28 h-10 md:w-44 md:h-14" />
+            <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-44 md:h-14" />
           )}
         </div>
         <button className="lg:hidden" onClick={buttonOnChangeBars}>

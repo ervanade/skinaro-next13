@@ -25,15 +25,15 @@ const Footer = ({data}) => {
         <h1 className="tracking-[2px] mb-3 font-luxyna text-xl  ">Connect With Us</h1>
         <div className="socmed flex gap-4 mb-5">
           <a href={data.facebook || "https://www.facebook.com"}><img src="/fb-icon.png" alt="Facebook Icon" /></a>
-          <a href={data.tiktok || "https://www.tiktok.com/"}><img src="/icon-tiktok.png" alt="Facebook Icon" /></a>
-          <a href={data.instagram || "https://www.instagram.com/"}><img src="/ig-icon.png" alt="Facebook Icon" /></a>
+          <a href={data.tiktok || "https://www.tiktok.com/"}><img src="/icon-tiktok.png" alt="Tiktok Icon" /></a>
+          <a href={data.instagram || "https://www.instagram.com/"}><img src="/ig-icon.png" alt="Instagram Icon" /></a>
           {/* <a href="#"><img src="/twitter-icon.png" alt="Facebook Icon" /></a> */}
         </div>
         <h1 className="tracking-[2px] mb-3 font-luxyna text-xl  ">Official Store</h1>
          <div className="socmed flex gap-4 mb-3">
-          <a href={data.shopee || "https://shopee.co.id/skinaroofficial"}><img src="/shopee-icon.png" alt="Facebook Icon" /></a>
-          <a href={data.tokopedia || "https://www.tokopedia.com/"}><img src="/tokped-icon.png" alt="Facebook Icon" /></a>
-          <a href={data.tiktok || "https://www.tiktok.com/"}><img src="/tiktokshop-icon.png" alt="Facebook Icon" /></a>
+          <a href={data.shopee || "https://shopee.co.id/skinaroofficial"}><img src="/shopee-icon.png" alt="Shopee Icon" /></a>
+          <a href={data.tokopedia || "https://www.tokopedia.com/"}><img src="/tokped-icon.png" alt="Tokopedia Icon" /></a>
+          <a href={data.tiktok || "https://www.tiktok.com/"}><img src="/tiktokshop-icon.png" alt="Tiktok Shop Icon" /></a>
           {/* <a href="#"><img src="/twitter-icon.png" alt="Facebook Icon" /></a> */}
         </div>
       </div>
