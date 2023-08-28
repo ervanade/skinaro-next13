@@ -227,7 +227,7 @@ const Product = ({data}) => {
         >
           <BsChevronRight size={30} className="font-bold text-[#6B826F]" />
         </div> */}
-        <div className="next-arrow"></div>
+        {/* <div className="next-arrow"></div> */}
         <div className="image w-full flex flex-col gap-4">
           {/* <div className="image h-[350px] md:h-[450px] md:w-1/2 flex justify-center items-center self-center p-12 md:p-16" > */}
           {data[slider].main_image[0].image_default ? 
@@ -277,7 +277,7 @@ const Product = ({data}) => {
           </div>
         </div>
 
-        <div className="text_container flex flex-col gap-4 justify-center items-center md:w-full transition-all duration-300 relative">
+        <div className="text_container flex flex-col gap-4 md:w-full transition-all duration-300 relative">
           <Image
             src={"/assets/Vector.png"}
             width={24}
