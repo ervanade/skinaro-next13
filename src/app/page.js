@@ -10,29 +10,29 @@ import Footer from '@/components/footer/Footer'
 import Modal from '@/components/modal/Modal'
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: {revalidate: 5}})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: { revalidate: 5 } })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
- 
+
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     return (
-          <h1 className="text-gray-700 font-luxyna text-center">
-            Something Went Wrong With Data !!!
-          </h1>
+      <h1 className="text-gray-700 font-luxyna text-center">
+        Something Went Wrong With Data !!!
+      </h1>
     )
   }
- 
+
   return res.json()
 }
 
 
 export default async function Home() {
-  const {data} = await getData()
+  const { data } = await getData()
   return (
     <>
       <Navbar />
-      <Modal data={data?.banner[0]} />
+      <Modal data={data?.banner} />
       {/* Hero Seection */}
       <Hero data={data?.banner} />
       {/* <Hero data={data.data[0].hero} /> */}
