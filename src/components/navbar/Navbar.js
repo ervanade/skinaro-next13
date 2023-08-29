@@ -57,9 +57,13 @@ const Navbar = () => {
       <div className="container mx-auto max-w-7xl px-6 md:px-10 lg:px-24 py-4 flex justify-between items-center">
         <div className="left-navbar">
           {color ? (
-            <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-[155px] md:h-14" />
+            <a href='#hero'>
+              <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-[155px] md:h-14" />
+            </a>
           ) : (
-            <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-[155px] md:h-14" />
+            <a href='#hero'>
+              <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-[155px] md:h-14" />
+            </a>
           )}
         </div>
         <button className="lg:hidden" onClick={buttonOnChangeBars}>
