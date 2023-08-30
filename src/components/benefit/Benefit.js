@@ -21,15 +21,19 @@ const Benefit = ({data}) => {
               {parse(data[1].content) || "Aro Tea has antioxidants that help remove toxins from your body, and start the healing process. Applying antioxidant rich products helps to protect our skin cells from damage and maintain healthy, smooth, and supple skin."}
             </div>
           </div>
-          <div className="image w-full md:h-[300px] lg:h-[400px] border-lg">
-            <img src={data[2].image_default ||"assets/benefit-2.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" />
+          <div className="image w-full h-[320px] lg:h-[400px] border-lg relative">
+            <Image src={data[2].image_default ||"assets/benefit-2.png"} alt="benefit skinaro" fill className="w-full h-full object-contain border-lg" />
+            {/* <img src={data[2].image_default ||"assets/benefit-2.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" /> */}
           </div>
 
         </div>
         <div className="flex flex-col-reverse gap-3 sm:gap-6 w-full md:relative">
-          <div className="image w-full md:h-[300px] lg:h-[400px] border-lg md:absolute md:top-0 md:-left-[72px]">
+          {/* <div className="image w-full md:h-[300px] lg:h-[400px] border-lg md:absolute md:top-0 md:-left-[72px]">
             <img src={data[1].image_default || "assets/benefit-1.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" />
-            {/* <img src={data[1].image_default || "assets/benefit-1.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" /> */}
+          </div> */}
+          <div className="image w-full h-[320px] lg:h-[400px] border-lg relative md:absolute md:top-0 md:-left-[72px]">
+            <Image src={data[1].image_default || "assets/benefit-1.png"} alt="benefit skinaro" fill className="w-full h-full object-contain border-lg" />
+            {/* <img src={data[2].image_default ||"assets/benefit-2.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" /> */}
           </div>
           <div className="description flex flex-col gap-2 sm:gap-4 md:list-disc text-black font-light text-sm sm:text-base">
             {data[2].content ? parse(data[2].content) : <ul className='md:list-disc text-black font-light text-sm sm:text-base'>

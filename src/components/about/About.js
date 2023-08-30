@@ -13,9 +13,8 @@ const About = ({ data }) => {
         <div className="left-about w-full object-cover relative">
           <h1 className="font-luxyna text-black absolute -top-7 left-16 text-5xl md:text-7xl z-[1]">{data?.title || "Why Aro?"}</h1>
           <img src={`${data?.image_default}` || "assets/about-img.png"} alt="Skinaro" className="w-full h-full object-cover px-6 md:px-0" />
-          {/* <div className="img-about w-full h-full relative">
-        <Image src={"/assets/about-img.png"} alt='Skinaro' layout='fill'
-    objectFit='contain' className='px-6 md:px-0 object-cover' />
+          {/* <div className="img-about w-full h-[400px] md:h-full relative">
+        <Image src={"/assets/about-img.png"} alt='Skinaro' layout='fill' className='px-6 md:px-0 object-cover' />
         </div> */}
         </div>
         <div className="right-about flex flex-col justify-center px-6 w-full">

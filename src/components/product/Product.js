@@ -237,6 +237,9 @@ const Product = ({data}) => {
           className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
           style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default})` }}
         >
+          {/* <div className="w-full relative h-[350px] md:h-[450px] ">
+            <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default}`} fill className="object-contain" />
+          </div> */}
           {/* <img src={item.image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
         </div> : <div
           className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
@@ -248,25 +251,26 @@ const Product = ({data}) => {
           {/* <img src={productData[slider].image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
           {/* </div> */}
           <div className="img-thumbnail flex gap-4 justify-center w-full">
-            {productData.map((item, index) => {
+            {data.map((item, index) => {
               return (
                 <div
                   key={index}
                   onClick={() => setSlider(index)}
-                  className={`img-box transition-all duration-200 h-16 w-16 border flex justify-center items-center cursor-pointer p-3 border-gray-300 rounded ${slider === index ? "" : "opacity-60"
+                  className={`img-box transition-all duration-200 h-16 w-16 border flex justify-center items-center cursor-pointer p-3 border-gray-300 rounded relative ${slider === index ? "" : "opacity-60"
                     }`}
                 >
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="md:w-full h-full md:h-auto object-cover"
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.main_image[0].image_default}`}
+                    alt="thumbnail"
+                    fill
+                    className="md:w-full h-full md:h-auto object-contain p-2"
                   />
                 </div>
               );
             })}
           </div>
           <div className="controller flex gap-2 justify-center w-full">
-            {productData.map((item, index) => {
+            {data?.map((item, index) => {
               return (
                 <div
                   key={item.id}
