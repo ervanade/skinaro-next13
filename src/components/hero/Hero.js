@@ -17,7 +17,9 @@ const Hero = ({data}) => {
   const settings = {
     dots: false,       // Menampilkan dots
     infinite: true,   // Carousel berputar terus-menerus
-    speed: 500,       // Kecepatan perubahan slide (ms)
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 7000,       // Kecepatan perubahan slide (ms)
     slidesToShow: 1,  // Jumlah slide yang ditampilkan sekaligus
     slidesToScroll: 1 // Jumlah slide yang di-scroll sekaligus
   };
