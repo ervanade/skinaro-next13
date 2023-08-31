@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import parse from 'html-react-parser';
 
-const Benefit = ({data}) => {
+const Benefit = ({ data }) => {
   return (
     <div className="arotea w-full md:mb-16 relative py-8 md:pb-24 bg-cover bg-no-repeat" >
 
@@ -21,8 +21,8 @@ const Benefit = ({data}) => {
               {parse(data[1].content) || "Aro Tea has antioxidants that help remove toxins from your body, and start the healing process. Applying antioxidant rich products helps to protect our skin cells from damage and maintain healthy, smooth, and supple skin."}
             </div>
           </div>
-          <div className="image w-full h-[320px] lg:h-[400px] border-lg relative">
-            <Image src={data[2].image_default ||"assets/benefit-2.png"} alt="benefit skinaro" fill className="w-full h-full object-contain border-lg" />
+          <div className="image w-full h-[280px] xs:h-[320px] lg:h-[400px] border-lg relative">
+            <Image src={data[2].image_default || "assets/benefit-2.png"} alt="benefit skinaro" fill className="w-full h-full object-contain border-lg" />
             {/* <img src={data[2].image_default ||"assets/benefit-2.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" /> */}
           </div>
 
@@ -31,7 +31,7 @@ const Benefit = ({data}) => {
           {/* <div className="image w-full md:h-[300px] lg:h-[400px] border-lg md:absolute md:top-0 md:-left-[72px]">
             <img src={data[1].image_default || "assets/benefit-1.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" />
           </div> */}
-          <div className="image w-full h-[320px] lg:h-[400px] border-lg relative md:absolute md:top-0 md:-left-[72px]">
+          <div className="image w-full h-[280px] xs:h-[320px] lg:h-[400px] border-lg relative md:absolute md:top-0 md:-left-[72px]">
             <Image src={data[1].image_default || "assets/benefit-1.png"} alt="benefit skinaro" fill className="w-full h-full object-contain border-lg" />
             {/* <img src={data[2].image_default ||"assets/benefit-2.png"} alt="benefit skinaro" className="w-full h-full object-cover border-lg" /> */}
           </div>
