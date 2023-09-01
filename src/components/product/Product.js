@@ -181,6 +181,7 @@ const Product = ({data}) => {
     },
   ];
   const [slider, setSlider] = useState(0);
+  const [prodImage, setProdImage] = useState(0);
   const [productDesc, setProductDesc] = useState("about");
 
   // useEffect(() => {
