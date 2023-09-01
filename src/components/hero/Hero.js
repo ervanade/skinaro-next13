@@ -39,7 +39,7 @@ const Hero = ({data}) => {
           margin: "0 5px", // Jarak antar dots
           cursor: "pointer",
         }}
-        className="w-2 h-2 sm:w-3 sm:h-3"
+        className="w-[10px] h-[10px] sm:w-3 sm:h-3"
       />
     ),
     beforeChange: (oldIndex, newIndex) => {
