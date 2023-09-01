@@ -217,18 +217,18 @@ const Product = ({data}) => {
         Our Product
       </h1>
       <div className="container mx-auto max-w-7xl px-6 md:px-10 lg:px-24 text-black flex flex-col md:flex-row h-full justify-around gap-6 md:gap-0 group relative">
-        {/* <div
+        <div
           onClick={prevOnClick}
           className="prev-arrow z-10 hidden group-hover:block absolute top-[200px] sm:top-[200px] md:top-[200px] left-6 md:left-10 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer duration-500"
         >
-          <BsChevronLeft size={30} className="font-bold text-[#6B826F]" />
+          <BsChevronLeft size={32} className="font-bold text-[#FC7F66]" />
         </div>
         <div
           onClick={nextOnClick}
           className="next-arrow z-10 hidden group-hover:block absolute top-[200px] sm:top-[200px] md:top-[200px] right-0 md:right-0 lg:right-3 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
         >
-          <BsChevronRight size={30} className="font-bold text-[#6B826F]" />
-        </div> */}
+          <BsChevronRight size={32} className="font-bold text-[#FC7F66]" />
+        </div>
         {/* <div className="next-arrow"></div> */}
         <div className="image w-full flex flex-col gap-4">
           {/* <div className="image h-[350px] md:h-[450px] md:w-1/2 flex justify-center items-center self-center p-12 md:p-16" > */}

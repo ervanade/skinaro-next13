@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import { BsCart } from "react-icons/bs";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
@@ -7,6 +7,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 
 const Hero = ({data}) => {
+  const [currentSlide, setCurrentSlide] = useState(0); // Definisikan state untuk currentSlide
+
   const sliderItem = [
     { id: 1, image: 'hero-skinaro.png' },
     { id: 2, image: 'bg-1-skinaro.jpg' },
@@ -15,13 +17,33 @@ const Hero = ({data}) => {
     // { id: 4, image: 'assets/hero/hero-bg-mobile-1.png' }
   ]
   const settings = {
-    dots: false,       // Menampilkan dots
+    dots: true,       // Menampilkan dots
     infinite: true,   // Carousel berputar terus-menerus
     speed: 1000,
     autoplay: true,
     autoplaySpeed: 7000,       // Kecepatan perubahan slide (ms)
     slidesToShow: 1,  // Jumlah slide yang ditampilkan sekaligus
-    slidesToScroll: 1 // Jumlah slide yang di-scroll sekaligus
+    slidesToScroll: 1, // Jumlah slide yang di-scroll sekaligus
+    appendDots: (dots) => (
+      <div style={{ textAlign: "center", marginTop: "-0px" }}>
+        <ul style={{ margin: "15px" }}>{dots}</ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "12px", // Sesuaikan dengan lebar dots
+          height: "12px", // Sesuaikan dengan tinggi dots
+          background: i === currentSlide ? "#FF5722" : "#E0E0E0", // Warna dots aktif dan non-aktif
+          borderRadius: "10px", // Bentuk dots
+          margin: "0 5px", // Jarak antar dots
+          cursor: "pointer",
+        }}
+      />
+    ),
+    beforeChange: (oldIndex, newIndex) => {
+      setCurrentSlide(newIndex); // Mengupdate currentSlide saat slide berubah
+    },
   };
   if(!data) {
     return (
