@@ -76,7 +76,7 @@ const Contact = () => {
             </div>
             <div className="justify-center items-center w-full flex">
               <button type='submit' disabled={loading} className="px-20 py-3 bg-[#FC7F66] rounded-xl lg:mt-6 hover:bg-white hover:text-[#FC7F66] transition-all duration-200">
-                Send
+                {loading ? "Loading..." : "Send"}
               </button>
             </div>
           </form>
