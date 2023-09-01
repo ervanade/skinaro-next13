@@ -32,13 +32,14 @@ const Hero = ({data}) => {
     customPaging: (i) => (
       <div
         style={{
-          width: "12px", // Sesuaikan dengan lebar dots
-          height: "12px", // Sesuaikan dengan tinggi dots
-          background: i === currentSlide ? "#FF5722" : "#E0E0E0", // Warna dots aktif dan non-aktif
+          // width: "12px", // Sesuaikan dengan lebar dots
+          // height: "12px", // Sesuaikan dengan tinggi dots
+          background: i === currentSlide ? "#FF5722" : "#C9C9C9", // Warna dots aktif dan non-aktif
           borderRadius: "10px", // Bentuk dots
           margin: "0 5px", // Jarak antar dots
           cursor: "pointer",
         }}
+        className="w-2 h-2 sm:w-3 sm:h-3"
       />
     ),
     beforeChange: (oldIndex, newIndex) => {
