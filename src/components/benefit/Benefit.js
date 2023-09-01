@@ -10,7 +10,7 @@ const Benefit = ({ data }) => {
       <Image src={"/assets/Vector.png"} width={24} height={24} className='absolute bottom-3 right-48 md:block hidden' alt='Leaf Skinaro' />
 
 
-      <div className="container mx-auto max-w-7xl gap-10 px-6 md:px-10 lg:px-24 flex justify-center flex-col md:flex-row relative ">
+      <div className="container mx-auto max-w-7xl gap-4 xs:gap-6 md:gap-10 px-6 md:px-10 lg:px-24 flex justify-center flex-col md:flex-row relative ">
         <Image src={"/assets/Vector.png"} width={32} height={32} className='absolute bottom-5 left-0 lg:left-5 md:block hidden' alt='Leaf Skinaro' />
         <div className="flex flex-col gap-3 sm:gap-6 w-full">
           <div className="description flex flex-col gap-2 sm:gap-4">
