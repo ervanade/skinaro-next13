@@ -4,7 +4,7 @@ const Footer = ({data}) => {
   return (
     <div className="footer w-full bg-[#FC7F66] py-10">
     <div className="container mx-auto max-w-7xl  px-6 md:px-10 lg:px-16 flex justify-between lg:flex-row flex-col space-y-12 lg:space-y-0 mb-16 lg:mb-0">
-      <div className="logo"><img src="/skinaro_white.png" alt="Logo Skinaro White" /></div>
+      <div className="logo"><img src="/assets/logo-tagline.png" alt="Logo Skinaro White" className='max-h-[100px]' /></div>
 
       <div className="nav-menu flex flex-col gap-4">
         <a href="#hero" className="text-base text-gray-200 hover:text-white">
