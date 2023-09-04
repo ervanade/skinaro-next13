@@ -271,7 +271,7 @@ const Product = ({data}) => {
             })}
           </div> */}
           <div className="img-thumbnail flex gap-4 justify-center w-full">
-            {data[slider].main_image.map((item, index) => {
+            {data[slider].product_images.map((item, index) => {
               return (
                 <div
                   key={index}

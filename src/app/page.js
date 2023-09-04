@@ -9,8 +9,14 @@ import Contact from '@/components/contact/Contact'
 import Footer from '@/components/footer/Footer'
 import Modal from '@/components/modal/Modal'
 
+const https = require('https');
+
+const agent = new https.Agent({
+  rejectUnauthorized: false,
+});
+
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: { revalidate: 10 } })
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: { revalidate: 10 }, agent: agent })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 

@@ -2,6 +2,12 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import parse from 'html-react-parser';
 
+const https = require('https');
+
+const agent = new https.Agent({
+  rejectUnauthorized: false,
+});
+
 
 export const metadata = {
   title: 'Skinaro - Beauty Aro Tea Skin Care',
@@ -53,7 +59,7 @@ export default async function RootLayout({ children }) {
   )
 }
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: {revalidate: 36000}})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: {revalidate: 36000}, agent: agent})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
