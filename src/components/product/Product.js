@@ -299,7 +299,7 @@ const Product = ({data}) => {
                   <img
                     src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_default}`}
                     alt="thumbnail"
-                    className="md:w-full h-full md:h-auto object-contain p-2"
+                    className="md:w-full h-full md:h-auto object-contain"
                   />
                 </div>
               );
