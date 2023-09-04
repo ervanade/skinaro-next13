@@ -8,15 +8,17 @@ import Benefit from '@/components/benefit/Benefit'
 import Contact from '@/components/contact/Contact'
 import Footer from '@/components/footer/Footer'
 import Modal from '@/components/modal/Modal'
+import fetch from 'node-fetch';
 
 const https = require('https');
 
-const agent = new https.Agent({
-  rejectUnauthorized: false,
-});
+
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: { revalidate: 10 }, agent: agent })
+  const agent = new https.Agent({
+    rejectUnauthorized: false,
+  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: { revalidate: 10 }, method: 'GET', agent: agent })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 

@@ -190,10 +190,21 @@ const Product = ({data}) => {
   // }, [])
   const prevOnClick = () => {
     setSlider((prev) => (prev === 0 ? productData.length - 1 : prev - 1));
+    setProdImage(0)
   };
   const nextOnClick = () => {
     setSlider((prev) => (prev === productData.length - 1 ? 0 : prev + 1));
+    setProdImage(0)
   };
+
+  const changeProdSlider = (index) => {
+    setSlider(index)
+    setProdImage(0)
+  }
+  useEffect(() => {
+    setProdImage(0)
+  }, [setSlider, slider])
+  
   return (
     <div
       className="product w-full md:my-16 flex flex-col justify-center items-center py-8 md:py-24 bg-cover bg-no-repeat relative"
@@ -233,15 +244,15 @@ const Product = ({data}) => {
         {/* <div className="next-arrow"></div> */}
         <div className="image w-full flex flex-col gap-4">
           {/* <div className="image h-[350px] md:h-[450px] md:w-1/2 flex justify-center items-center self-center p-12 md:p-16" > */}
-          {data[slider].main_image[0].image_default ? 
-          <div className="transition-all duration-500"
+          {data[slider].product_images[prodImage].image_default ? 
+          <div className="transition-all duration-500 flex justify-center"
           // className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
           // style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default})` }}
         >
-          <div className="w-full relative h-[350px] md:h-[450px] transition-all duration-500">
-            <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[prodImage].image_default}`} fill className="object-contain px-4 pt-4 md:px-6 md:pt-6 transition-all duration-500" />
-          </div>
-          {/* <img src={item.image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
+          {/* <div className="w-full relative h-[350px] md:h-[450px] transition-all duration-500"> */}
+            {/* <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].product_images[prodImage].image_default}`} fill className="object-contain px-4 pt-4 md:px-6 md:pt-6 transition-all duration-500" /> */}
+          {/* </div> */}
+          <img src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].product_images[prodImage].image_default}`} alt="" className="md:w-full h-full md:h-auto object-cover duration-500 px-8 md:px-12 justify-center self-center"  />
         </div> : <div
           className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
           style={{ backgroundImage: `url(${productData[slider].image})` }}
@@ -279,10 +290,15 @@ const Product = ({data}) => {
                   className={`img-box transition-all duration-200 h-16 w-16 border flex justify-center items-center cursor-pointer p-3 border-gray-300 rounded relative ${prodImage === index ? "" : "opacity-60"
                     }`}
                 >
-                  <Image
+                  {/* <Image
                     src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_default}`}
                     alt="thumbnail"
                     fill
+                    className="md:w-full h-full md:h-auto object-contain p-2"
+                  /> */}
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_default}`}
+                    alt="thumbnail"
                     className="md:w-full h-full md:h-auto object-contain p-2"
                   />
                 </div>
@@ -296,7 +312,7 @@ const Product = ({data}) => {
                   key={item.id}
                   className={`h-2 rounded-lg cursor-pointer transition-all duration-200 ${slider === index ? "bg-[#D9D9D9] w-20" : "bg-[#FC7F66] w-12"
                     }`}
-                  onClick={() => setSlider(index)}
+                  onClick={() => changeProdSlider(index)}
                 ></div>
               );
             })}

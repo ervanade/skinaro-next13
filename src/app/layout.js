@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import parse from 'html-react-parser';
+import fetch from 'node-fetch';
 
 const https = require('https');
 
@@ -59,7 +60,7 @@ export default async function RootLayout({ children }) {
   )
 }
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: {revalidate: 36000}, agent: agent})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: {revalidate: 36000}, method: 'GET', agent: agent})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
