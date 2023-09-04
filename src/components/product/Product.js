@@ -239,7 +239,7 @@ const Product = ({data}) => {
           style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default})` }}
         >
           {/* <div className="w-full relative h-[350px] md:h-[450px] ">
-            <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default}`} fill className="object-contain" />
+            <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[prodImage].image_default}`} fill className="object-contain p-4 md:p-6" />
           </div> */}
           {/* <img src={item.image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
         </div> : <div
@@ -270,6 +270,25 @@ const Product = ({data}) => {
               );
             })}
           </div>
+          {/* <div className="img-thumbnail flex gap-4 justify-center w-full">
+            {data[slider].main_image.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  onClick={() => setProdImage(index)}
+                  className={`img-box transition-all duration-200 h-16 w-16 border flex justify-center items-center cursor-pointer p-3 border-gray-300 rounded relative ${prodImage === index ? "" : "opacity-60"
+                    }`}
+                >
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_default}`}
+                    alt="thumbnail"
+                    fill
+                    className="md:w-full h-full md:h-auto object-contain p-2"
+                  />
+                </div>
+              );
+            })}
+          </div> */}
           <div className="controller flex gap-2 justify-center w-full">
             {data?.map((item, index) => {
               return (
