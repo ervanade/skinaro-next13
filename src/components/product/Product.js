@@ -234,13 +234,13 @@ const Product = ({data}) => {
         <div className="image w-full flex flex-col gap-4">
           {/* <div className="image h-[350px] md:h-[450px] md:w-1/2 flex justify-center items-center self-center p-12 md:p-16" > */}
           {data[slider].main_image[0].image_default ? 
-          <div
-          className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
-          style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default})` }}
+          <div className="transition-all duration-500"
+          // className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
+          // style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default})` }}
         >
-          {/* <div className="w-full relative h-[350px] md:h-[450px] ">
-            <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[prodImage].image_default}`} fill className="object-contain p-4 md:p-6" />
-          </div> */}
+          <div className="w-full relative h-[350px] md:h-[450px] transition-all duration-500">
+            <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[prodImage].image_default}`} fill className="object-contain px-4 pt-4 md:px-6 md:pt-6 transition-all duration-500" />
+          </div>
           {/* <img src={item.image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
         </div> : <div
           className={`w-full bg-contain md:bg-contain bg-center image h-[350px] md:h-[450px] md:w-2/3 flex justify-center items-center self-center md:p-8 duration-500 transition-all bg-no-repeat`}
@@ -251,7 +251,7 @@ const Product = ({data}) => {
 
           {/* <img src={productData[slider].image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
           {/* </div> */}
-          <div className="img-thumbnail flex gap-4 justify-center w-full">
+          {/* <div className="img-thumbnail flex gap-4 justify-center w-full">
             {data.map((item, index) => {
               return (
                 <div
@@ -269,8 +269,8 @@ const Product = ({data}) => {
                 </div>
               );
             })}
-          </div>
-          {/* <div className="img-thumbnail flex gap-4 justify-center w-full">
+          </div> */}
+          <div className="img-thumbnail flex gap-4 justify-center w-full">
             {data[slider].main_image.map((item, index) => {
               return (
                 <div
@@ -288,7 +288,7 @@ const Product = ({data}) => {
                 </div>
               );
             })}
-          </div> */}
+          </div>
           <div className="controller flex gap-2 justify-center w-full">
             {data?.map((item, index) => {
               return (
