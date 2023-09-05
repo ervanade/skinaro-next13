@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import parse from 'html-react-parser';
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 const https = require('https');
 
@@ -42,7 +42,7 @@ export default async function RootLayout({ children }) {
         src="https://www.facebook.com/tr?id=755549682423303&ev=PageView&noscript=1"
         /></noscript>
           `;
-      const {data} = await getData()
+  const { data } = await getData()
 
   return (
     <html lang="en">
@@ -60,14 +60,14 @@ export default async function RootLayout({ children }) {
   )
 }
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: {revalidate: 36000}, method: 'GET', agent: agent})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: { revalidate: 36000 }, method: 'GET', agent: agent })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
- 
+
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
- 
+
   return res.json()
 }

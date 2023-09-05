@@ -8,7 +8,7 @@ import Benefit from '@/components/benefit/Benefit'
 import Contact from '@/components/contact/Contact'
 import Footer from '@/components/footer/Footer'
 import Modal from '@/components/modal/Modal'
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 const https = require('https');
 
