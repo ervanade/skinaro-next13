@@ -60,7 +60,7 @@ export default async function RootLayout({ children }) {
   )
 }
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { next: { revalidate: 36000 }, method: 'GET', agent: agent })
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_KEY}/home`, { cache: 'no-store', method: 'GET', agent: agent })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
