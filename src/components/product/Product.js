@@ -8,6 +8,7 @@ import {
   BsChevronRight,
 } from "react-icons/bs";
 import parse from 'html-react-parser';
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 const Product = ({ data }) => {
   const productData = [
@@ -231,15 +232,15 @@ const Product = ({ data }) => {
       <div className="container mx-auto max-w-7xl px-6 md:px-10 lg:px-24 text-black flex flex-col md:flex-row h-full justify-around gap-6 md:gap-0 group relative">
         <div
           onClick={prevOnClick}
-          className="prev-arrow z-10 hidden group-hover:block absolute top-[200px] sm:top-[200px] md:top-[200px] left-6 md:left-10 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer duration-500"
+          className="prev-arrow z-10 hidden group-hover:block absolute top-[200px] sm:top-[200px] md:top-[200px] left-0 xs:left-5 md:left-10  cursor-pointer duration-500 bg-white border shadow-md p-1 md:p-2 rounded-md"
         >
-          <BsChevronLeft size={32} className="font-bold text-[#FC7F66]" />
+          <FaChevronLeft size={32} className="font-bold text-[#FC7F66]" />
         </div>
         <div
           onClick={nextOnClick}
-          className="next-arrow z-10 hidden group-hover:block absolute top-[200px] sm:top-[200px] md:top-[200px] right-0 md:right-0 lg:right-3 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+          className="next-arrow z-10 hidden group-hover:block absolute top-[200px] sm:top-[200px] md:top-[200px] right-0 xs:right-5 md:right-10 lg:right-10  cursor-pointer bg-white border shadow-md p-1 md:p-2 rounded-md"
         >
-          <BsChevronRight size={32} className="font-bold text-[#FC7F66]" />
+          <FaChevronRight size={32} className="font-bold text-[#FC7F66]" />
         </div>
         {/* <div className="next-arrow"></div> */}
         <div className="image w-full flex flex-col gap-4">
