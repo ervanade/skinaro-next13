@@ -66,11 +66,7 @@ async function getData() {
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
-    return (
-      <h1 className="text-gray-700 font-luxyna text-center">
-        Something Went Wrong With Data !!!
-      </h1>
-    )
+    throw new Error('Failed to fetch data')
   }
 
   return res.json()
