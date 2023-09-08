@@ -15,24 +15,24 @@ const Product = ({ data }) => {
   const [prodImage, setProdImage] = useState(0);
   const [productDesc, setProductDesc] = useState("about");
 
-  const fetchApiArticle = async (url) => {
-    try {
-      const response = await axios.get(url);
-      return response.data.data;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const swrConfig = {
-    fetcher: fetchApiArticle,
-    revalidateOnFocus: false, // menonaktifkan refresh otomatis saat aplikasi di-fokuskan
-    dedupingInterval: 5000, // mencegah pengambilan data ganda dalam interval 5 detik
-  };
-  const { dataTest: article, error } = useSWR(
-    `${process.env.NEXT_PUBLIC_APP_API_KEY}/home`,
-    swrConfig
-  );
-  console.log(dataTest);
+  // const fetchApiArticle = async (url) => {
+  //   try {
+  //     const response = await axios.get(url);
+  //     return response.data.data;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // const swrConfig = {
+  //   fetcher: fetchApiArticle,
+  //   revalidateOnFocus: false, // menonaktifkan refresh otomatis saat aplikasi di-fokuskan
+  //   dedupingInterval: 5000, // mencegah pengambilan data ganda dalam interval 5 detik
+  // };
+  // const { dataTest: article, error } = useSWR(
+  //   `${process.env.NEXT_PUBLIC_APP_API_KEY}/home`,
+  //   swrConfig
+  // );
+  // console.log(dataTest);
 
   // useEffect(() => {
   //     const interval = setInterval(() => setSlider((prev) => (prev === (productData.length - 1) ? 0 : prev + 1)), 3000)
