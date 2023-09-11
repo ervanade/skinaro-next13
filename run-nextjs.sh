@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # Navigate to your Next.js project directory
-cd /path/to/your/nextjs/app
-
 npm install
 
 npm run build
