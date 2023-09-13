@@ -251,7 +251,7 @@ const Product = ({ data }) => {
             // style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].main_image[0].image_default})` }}
             >
               <div className="w-full relative h-[350px] md:h-[450px] transition-all duration-500">
-                <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].product_images[prodImage].image_default}`} fill className="object-contain px-4 pt-4 md:px-6 md:pt-6 transition-all duration-500" />
+                <Image src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].product_images[prodImage].image_default}`} fill className="object-contain px-4 pt-4 md:px-6 md:pt-6 transition-all duration-500" alt={data[slider].overview_title || "Skinaro Product"} />
               </div>
               {/* <img src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[slider].product_images[prodImage].image_default}`} alt="" className="md:w-full h-full md:h-auto object-cover duration-500 px-8 md:px-12 justify-center self-center"  /> */}
             </div> : <div
