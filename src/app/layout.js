@@ -13,6 +13,11 @@ const agent = new https.Agent({
 export const metadata = {
   title: 'Skinaro - Beauty Aro Tea Skin Care',
   description: 'Skinaro - Beauty Aro Tea Skin Care',
+  keywords: ['Skinaro', 'Skincare', 'Beauty'],
+  applicationName: 'Skinaro',
+  authors: [{ name: 'CPXi Asia' }, { name: 'CPXi Asia', url: 'https://skinaro.id' }],
+  creator: 'CPXi Asia',
+  publisher: 'CPXi Asia',
   metadataBase: new URL('https://skinaro.id'),
   alternates: {
     canonical: '/',
