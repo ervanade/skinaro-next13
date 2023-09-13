@@ -13,6 +13,48 @@ const agent = new https.Agent({
 export const metadata = {
   title: 'Skinaro - Beauty Aro Tea Skin Care',
   description: 'Skinaro - Beauty Aro Tea Skin Care',
+  metadataBase: new URL('https://skinaro.id'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'id-ID': '/id-ID',
+    },
+  },
+  openGraph: {
+    title: 'Next.js',
+    description: 'Skinaro - Beauty Aro Tea Skin Care',
+    url: 'https://skinaro.id',
+    siteName: 'Skinaro',
+    images: [
+      {
+        url: 'https://skinaro.id/images/Logo-with-Tagline.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://skinaro.id/images/Logo-with-Tagline.png',
+        width: 1800,
+        height: 1600,
+        alt: 'Skinaro Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default async function RootLayout({ children }) {
