@@ -66,7 +66,7 @@ const Navbar = () => {
             </a>
           )}
         </div>
-        <button className="lg:hidden" onClick={buttonOnChangeBars}>
+        <button className="lg:hidden" onClick={buttonOnChangeBars} aria-label="menu bar button">
           <GiHamburgerMenu className={`text-2xl ${color ? 'text-[#5F8171] hover:text-[#5e8a65]' : 'text-gray-700 hover:text-gray-900'} `} />
         </button>
         <div className="right-navbar space-x-6 hidden lg:block">

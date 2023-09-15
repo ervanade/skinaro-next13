@@ -44,7 +44,7 @@ export default async function Home() {
       {/* Hero Seection */}
       <Hero data={data?.banner} />
       {/* <Hero data={data.data[0].hero} /> */}
-      <a href={`https://wa.me/${data?.setting?.contact_phone}` || "https://wa.me"} target="_blank" className="items-center justify-center py-3 px-3 sm:px-8 bg-[#94AF78] fixed bottom-6 right-5 sm:right-10 z-50 rounded-full flex flex-row space-x-2 hover:bg-white hover:text-[#6B826F]">
+      <a href={`https://wa.me/${data?.setting?.contact_phone}` || "https://wa.me"} target="_blank" aria-label="Whatsapp Skinaro" className="items-center justify-center py-3 px-3 sm:px-8 bg-[#94AF78] fixed bottom-6 right-5 sm:right-10 z-50 rounded-full flex flex-row space-x-2 hover:bg-white hover:text-[#6B826F]">
         <BsFillChatDotsFill className="text-2xl" />
         <span className="hidden sm:block">Talk With Us</span>
       </a>
