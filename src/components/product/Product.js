@@ -226,9 +226,9 @@ const Product = ({ data }) => {
         className="absolute bottom-5 right-12 md:block hidden"
         alt="Leaf Orange"
       />
-      <h1 className="font-luxyna text-black text-center mb-16 text-4xl md:text-7xl">
+      <h2 className="font-luxyna text-black text-center mb-16 text-4xl md:text-7xl">
         Our Product
-      </h1>
+      </h2>
       <div className="container mx-auto max-w-7xl px-6 md:px-10 lg:px-24 text-black flex flex-col md:flex-row h-full justify-around gap-6 md:gap-0 group relative">
         <div
           onClick={prevOnClick}
@@ -328,9 +328,9 @@ const Product = ({ data }) => {
             className="absolute top-0 -left-12 md:block hidden"
             alt="Star Skinaro"
           />
-          <h1 className="text-3xl lg:text-5xl font-luxyna text-[black] self-start transition-all duration-300">
+          <h3 className="text-3xl lg:text-5xl font-luxyna text-[black] self-start transition-all duration-300">
             {data[slider].overview_title || productData[slider].name}
-          </h1>
+          </h3>
           <div className="tab justify-start self-start py-2">
             <div className="tab-header flex gap-2">
               <button

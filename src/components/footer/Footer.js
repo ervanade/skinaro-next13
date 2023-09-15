@@ -22,14 +22,14 @@ const Footer = ({data}) => {
       </div>
 
       <div className="connect flex flex-col">
-      <h1 className="tracking-[2px] mb-3 font-luxyna text-xl  ">Official Store</h1>
+      <h2 className="tracking-[2px] mb-3 font-luxyna text-xl  ">Official Store</h2>
          <div className="socmed flex gap-4 mb-3">
           <a href={data.shopee || "https://shopee.co.id/skinaroofficial"} target="_blank" ><img src="/shopee-icon.png" alt="Shopee Icon" /></a>
           <a href={data.tokopedia || "https://www.tokopedia.com/"} target="_blank" ><img src="/tokped-icon.png" alt="Tokopedia Icon" /></a>
           <a href={data.tiktok || "https://www.tiktok.com/"} target="_blank" ><img src="/tiktokshop-icon.png" alt="Tiktok Shop' Icon" /></a>
           {/* <a href="#"><img src="/twitter-icon.png" alt="Facebook Icon" /></a> */}
         </div>
-        <h1 className="tracking-[2px] mb-3 font-luxyna text-xl  ">Connect With Us</h1>
+        <h2 className="tracking-[2px] mb-3 font-luxyna text-xl  ">Connect With Us</h2>
         <div className="socmed flex gap-4 mb-5">
           <a href={data.facebook || "https://www.facebook.com"} target="_blank" ><img src="/fb-icon.png" alt="Facebook Icon" /></a>
           <a href={data.tiktok || "https://www.tiktok.com/"} target="_blank" ><img src="/icon-tiktok.png" alt="Tiktok Icon" /></a>
@@ -40,7 +40,7 @@ const Footer = ({data}) => {
       </div>
 
       <div className="connect ">
-        <h1 className="tracking-[2px] mb-3 font-luxyna text-xl">Subscribe Newsletter</h1>
+        <h2 className="tracking-[2px] mb-3 font-luxyna text-xl">Subscribe Newsletter</h2>
         <div className="socmed flex gap-0">
           <input type="text" className="focus:outline-none px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 text-sm rounded-tl-lg rounded-bl-lg focus:ring-green-800 focus:border-greenring-green-800 block w-full p-2.5 " placeholder="Type Your Email Here" />
           <a href="send" className="px-4 py-3 bg-[#f36549] hover:bg-white hover:text-[#f36549] transition-all duration-200">

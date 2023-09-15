@@ -63,7 +63,7 @@ const Contact = () => {
     <div className="contact  py-10 w-full relative lg:px-8 xl:px-24 bg-cover bg-no-repeat" id='contact' >
       {/* <img src="/fa-solid_leaf.png" className="lg:w-[173px] w-[100px] absolute top-0 right-4 md:block" alt="" /> */}
       <div className="container mx-auto max-w-7xl px-6 md:px-10 lg:px-24 bg-[#5F8171] py-10 rounded-3xl">
-        <h1 className="text-center font-luxyna tracking-[6px] text-2xl sm:text-4xl mb-6 md:mb-12 lg:mb-16">TALK WITH US</h1>
+        <h2 className="text-center font-luxyna tracking-[6px] text-2xl sm:text-4xl mb-6 md:mb-12 lg:mb-16">TALK WITH US</h2>
         <div className="form w-full">
           <form className="w-full lg:w-[800px] space-y-10 mx-auto" onSubmit={fetchApiPostContact}>
             <div className="form-top flex justify-center md:items-center  gap-4 md:gap-6 lg:gap-8 md:flex-row flex-col">
