@@ -80,7 +80,7 @@ const Navbar = () => {
 
         </div>
         <div className={`right-navbar z-50 space-y-4 flex flex-col fixed top-0 ${menuButton ? 'right-0' : '-right-[350px]'} lg:hidden w-2/3 xs:w-[350px] py-10 xs:py-16 px-8 xs:px-14 bg-[#5F8171] text-white h-full duration-200 transition-all ease-in`}>
-          <button className='absolute top-5 right-6' onClick={buttonOnChangeClose}><GiHamburgerMenu className='text-3xl text-gray-200 hover:text-white ' /></button>
+          <button className='absolute top-5 right-6' onClick={buttonOnChangeClose}><GiHamburgerMenu className='text-3xl text-gray-200 hover:text-white ' aria-label="close menu bar button"/></button>
           {navbarMenu.map(item => {
             return (
               <a key={item.id} href={item.link} className={`text-xl text-gray-200 hover:text-white font-medium `}>
