@@ -79,3 +79,9 @@ body {
 .slick-dots ul li {
   margin: 0 1px !important;
 }
+
+.product .table figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
