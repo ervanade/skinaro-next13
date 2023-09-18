@@ -1,5 +1,4 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import parse from 'html-react-parser';
 // import fetch from 'node-fetch';
 
