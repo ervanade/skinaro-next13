@@ -259,29 +259,6 @@ const Product = ({ data }) => {
               style={{ backgroundImage: `url(${productData[slider].image})` }}
             ></div>
           }
-
-
-          {/* <img src={productData[slider].image} alt="" className="md:w-full h-full md:h-auto object-cover duration-500" /> */}
-          {/* </div> */}
-          {/* <div className="img-thumbnail flex gap-4 justify-center w-full">
-            {data.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  onClick={() => setSlider(index)}
-                  className={`img-box transition-all duration-200 h-16 w-16 border flex justify-center items-center cursor-pointer p-3 border-gray-300 rounded relative ${slider === index ? "" : "opacity-60"
-                    }`}
-                >
-                  <Image
-                    src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.main_image[0].image_default}`}
-                    alt="thumbnail"
-                    fill
-                    className="md:w-full h-full md:h-auto object-contain p-2"
-                  />
-                </div>
-              );
-            })}
-          </div> */}
           <div className="img-thumbnail flex gap-4 justify-center w-full">
             {data[slider].product_images.map((item, index) => {
               return (
@@ -353,77 +330,6 @@ const Product = ({ data }) => {
               </button>
             </div>
           </div>
-          {/* <div className={`deskripsi text-gray-700 transition-all duration-300 ${productDesc === "about" ? "block" : "opacity-0 hidden"} transition-all duration-300`}>
-            <p className="font-semibold text-2xl text-black font-luxyna">Description : </p>
-            <p className="font-light text-black text-sm">{productData[slider].description}</p>
-          </div>
-
-          <div className={`ingridients self-start transition-all duration-300 ${productDesc === "ingridients" ? "block" : "opacity-0 hidden"}`}>
-            <p className="font-semibold text-2xl text-black font-luxyna">Active Ingridients : </p>
-
-            {
-              productData[slider].ingridients.map((item, index) => (
-                <div className="mb-3" key={index}>
-                  <p className="text-sm font-normal">{item.title}</p>
-                  <p className="text-sm font-light">{item.dexc}</p>
-                </div>
-              ))
-            }
-          </div> */}
-          {/* {productDesc === "about" ?
-          <>
-          <div className="deskripsi text-gray-700 transition-all duration-300">
-            <p className="font-semibold text-2xl text-black font-luxyna">Description : </p>
-            <p className="font-light text-black text-sm">{productData[slider].description}</p>
-          </div>
-          <div className="flex self-start flex-wrap">
-
-          {
-          productData[slider].benefit.map((item, index) => (
-            <div key={index} className={`img-box transition-all duration-200 h-24 w-28 flex flex-col gap-1 justify-center items-center cursor-pointer p-3`}
-          >
-            <img
-              src={item.img}
-              alt={item.desc}
-              className="md:w-full h-full md:h-auto object-cover px-3"
-            />
-            <p className="text-[10px] text-center">{item.desc}</p>
-          </div>
-          ))
-          }
-
-          </div>
-          </>
-          : productDesc === "how" ?
-          <><div className="ingridients self-start transition-all duration-300">
-          <p className="font-semibold text-2xl text-black font-luxyna">How To Use : </p>
-
-          {
-            productData[slider].ingridients.map((item, index) => (
-              <div className="mb-3" key={index}>
-                <p className="text-sm font-normal">{item.title}</p>
-                <p className="text-sm font-light">{item.dexc}</p>
-              </div>
-            ))
-          }
-        </div></>
-          : productDesc === "ingridients" ? 
-          <>
-          <div className="ingridients self-start transition-all duration-300">
-            <p className="font-semibold text-2xl text-black font-luxyna">Active Ingridients : </p>
-
-            {
-              productData[slider].ingridients.map((item, index) => (
-                <div className="mb-3" key={index}>
-                  <p className="text-sm font-normal">{item.title}</p>
-                  <p className="text-sm font-light">{item.dexc}</p>
-                </div>
-              ))
-            }
-          </div>
-          </>
-          : null  
-        } */}
           <div className="description text-gray-700 transition-all duration-300">
 
             {
@@ -434,40 +340,6 @@ const Product = ({ data }) => {
                     : ""
             }
           </div>
-
-          {/* <div className="deskripsi text-gray-700 transition-all duration-300">
-            <p className="font-semibold text-2xl text-black font-luxyna">Description : </p>
-            <p className="font-light text-black text-sm">{productData[slider].description}</p>
-          </div>
-          <div className="ingridients self-start transition-all duration-300">
-            <p className="font-semibold text-2xl text-black font-luxyna">Active Ingridients : </p>
-
-            {
-              productData[slider].ingridients.map((item, index) => (
-                <div className="mb-3" key={index}>
-                  <p className="text-sm font-normal">{item.title}</p>
-                  <p className="text-sm font-light">{item.dexc}</p>
-                </div>
-              ))
-            }
-          </div>
-          <div className="flex self-start flex-wrap">
-
-            {
-              productData[slider].benefit.map((item, index) => (
-                <div key={index} className={`img-box transition-all duration-200 h-24 w-28 flex flex-col gap-1 justify-center items-center cursor-pointer p-3`}
-                >
-                  <img
-                    src={item.img}
-                    alt={item.desc}
-                    className="md:w-full h-full md:h-auto object-cover px-3"
-                  />
-                  <p className="text-[10px] text-center">{item.desc}</p>
-                </div>
-              ))
-            }
-
-          </div> */}
 
           <div className="flex place-items-end self-end my-5">
             <a href={data[slider].link || "https://shopee.co.id/skinaroofficial"} target="_blank" className="items-center justify-center py-3 px-8 text-white bg-[#FC7F66] rounded-xl flex flex-row space-x-2 hover:bg-white hover:text-[#FC7F66] border hover:border-[#FC7F66] transition-all duration-200">

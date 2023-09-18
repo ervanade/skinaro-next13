@@ -3,6 +3,7 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import Image from 'next/image';
 const Navbar = () => {
   const [color, setColor] = useState(false);
   const [menuButton, setMenuButton] = useState(false)
@@ -58,11 +59,16 @@ const Navbar = () => {
         <div className="left-navbar">
           {color ? (
             <a href='#hero'>
-              <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-[155px] md:h-14" />
+              <div className='w-[112px] md:w-[155px] aspect-[2.775] relative'>
+              <Image src="/logo-hitam.png" alt="Logo Skinaro" fill sizes='100vw' className="w-full h-auto object-contain" />
+              </div>
             </a>
           ) : (
             <a href='#hero'>
-              <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-[155px] md:h-14" />
+              {/* <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-[155px] md:h-14" /> */}
+              <div className='w-[112px] md:w-[155px] aspect-[2.775] relative'>
+              <Image src="/logo-hitam.png" alt="Logo Skinaro" fill sizes='100vw' className="w-full h-auto object-contain" />
+              </div>
             </a>
           )}
         </div>
