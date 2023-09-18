@@ -114,6 +114,7 @@ const Hero = ({ data }) => {
                     <div className="w-full aspect-square relative ">
                       <Image
                         fill
+                        priority
                         alt="Banner Skinaro"
                         src={
                           `${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${item.image_mobile}` ||

@@ -34,6 +34,7 @@ const Modal = ({ data }) => {
               "/assets/hero/hero-bg-4.png"
             }
             alt="Popup Skinaro"
+            priority
             fill
             className="w-full h-auto object-contain"
           />
