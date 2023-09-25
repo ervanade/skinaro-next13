@@ -59,14 +59,14 @@ const Navbar = () => {
         <div className="left-navbar">
           {color ? (
             <a href='#hero'>
-              <div className='w-[112px] md:w-[155px] aspect-[2.775] relative'>
+              <div className='w-[112px] md:w-[155px] h-[calc(112px/2.775)] md:h-[calc(155px/2.775)] aspect-[2.775] relative'>
               <Image src="/logo-hitam.png" alt="Logo Skinaro" fill sizes='100vw' className="w-full h-auto object-contain" />
               </div>
             </a>
           ) : (
             <a href='#hero'>
               {/* <img src="/logo-hitam.png" alt="Logo Skinaro" className="w-28 h-10 md:w-[155px] md:h-14" /> */}
-              <div className='w-[112px] md:w-[155px] aspect-[2.775] relative'>
+              <div className='w-[112px] md:w-[155px] h-[calc(112px/2.775)] md:h-[calc(155px/2.775)] aspect-[2.775] relative'>
               <Image src="/logo-hitam.png" alt="Logo Skinaro" fill sizes='100vw' className="w-full h-auto object-contain" />
               </div>
             </a>

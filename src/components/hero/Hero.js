@@ -72,7 +72,7 @@ const Hero = ({ data }) => {
                     href="https://shopee.co.id/skinaroofficial"
                     target="_blank"
                   >
-                    <div className="w-full aspect-[2/1] relative ">
+                    <div className="!w-full !aspect-[2/1] relative !h-[calc(100vw/2)]">
                       <Image
                         fill
                         alt="Banner Skinaro"
@@ -111,7 +111,7 @@ const Hero = ({ data }) => {
                     href="https://shopee.co.id/skinaroofficial"
                     target="_blank"
                   >
-                    <div className="w-full aspect-square relative ">
+                    <div className="w-full aspect-square relative !h-[calc(100vw/1)]">
                       <Image
                         fill
                         alt="Banner Skinaro"
