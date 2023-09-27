@@ -48,7 +48,7 @@ const Navbar = () => {
     { id: 1, name: "Home", link: "#hero" },
     { id: 2, name: "Why Aro ?", link: "#why-aro" },
     { id: 3, name: "Our Product", link: "#product" },
-    { id: 4, name: "Talk With Us", link: "#contact" },
+    { id: 4, name: "Talk With Bestea", link: "#contact" },
   ]
   return (
     <div

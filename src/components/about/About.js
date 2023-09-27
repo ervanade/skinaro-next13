@@ -20,7 +20,7 @@ const About = ({ data }) => {
         <div className="right-about flex flex-col justify-center px-6 w-full">
           <div className="about-description py-8 space-y-8 sm:space-y-14">
             <div className="sm:text-base text-sm font-normal text-gray-700 lg:max-w-md">
-              {parse(data.content) || "Apart from spices to coffee, Indonesia is also famous as the best black tea exporter in the world. One of the best known is Kayu Aro Black Tea. Kayu Aro Tea is the best in terms of quality because the production process is still very traditional so that the taste of the tea is maintained. Not surprisingly, this tea, which has a strong aroma, is said to be a favorite of world royalty. From Queen Elizabeth in England to Queen Wilhelmina, Queen Juliana and Queen Beatrix in the Netherlands."}
+              {parse(data.content) || "Apart from spices and coffee, Indonesia is also famous as the best black tea exporter to the world. One of them is Kayu Aro Black Tea. Kayu Aro Black Tea is used as our main ingredients because it has powerful antioxidants that can help remove toxins from your body and speed up the healing process. Besides its health benefit for the body, tea can also aid in taking care of your skin, such as giving the body enough ammunition to fight infections and skin blemishes, helps delay aging, and promotes skin cell rejuvenation."}
             </div>
             <div>
               <a href={data.link || "https://shopee.co.id/skinaroofficial"} target="_blank" className="px-8 py-3 transition-all duration-200 bg-[#FC7F66] rounded-lg hover:bg-white hover:text-[#FC7F66] border hover:border-[#FC7F66]">

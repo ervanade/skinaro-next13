@@ -18,7 +18,7 @@ const Footer = ({data}) => {
           Our Product
         </a>
         <a href="#contact" className="text-base text-gray-200 hover:text-white">
-          Talk With Us
+          Talk With Bestea
         </a>
       </div>
 
@@ -28,6 +28,7 @@ const Footer = ({data}) => {
           <a href={data.shopee || "https://shopee.co.id/skinaroofficial"} target="_blank" ><Image width={30} height={30} src="/shopee-icon.png" alt="Shopee Icon" /></a>
           <a href={data.tokopedia || "https://www.tokopedia.com/"} target="_blank" ><Image width={30} height={30} src="/tokped-icon.png" alt="Tokopedia Icon" /></a>
           <a href={data.tiktok || "https://www.tiktok.com/"} target="_blank" ><Image width={30} height={30} src="/tiktokshop-icon.png" alt="Tiktok Shop' Icon" /></a>
+          <a href={data.lazada || "https://www.lazada.co.id/"} target="_blank" ><Image width={30} height={30} src="/logo-lazada.png" alt="Lazada Icon" /></a>
           {/* <a href="#"><img src="/twitter-icon.png" alt="Facebook Icon" /></a> */}
         </div>
         <h2 className="tracking-[2px] mb-3 font-luxyna text-xl  ">Connect With Us</h2>
@@ -35,6 +36,7 @@ const Footer = ({data}) => {
           <a href={data.facebook || "https://www.facebook.com"} target="_blank" ><Image width={30} height={30} src="/fb-icon.png" alt="Facebook Icon" /></a>
           <a href={data.tiktok || "https://www.tiktok.com/"} target="_blank" ><Image width={30} height={30} src="/icon-tiktok.png" alt="Tiktok Icon" /></a>
           <a href={data.instagram || "https://www.instagram.com/"} target="_blank" ><Image width={30} height={30} src="/ig-icon.png" alt="Instagram Icon" /></a>
+          <a href={data.twitter || "https://www.twitter.com/"} target="_blank" ><Image width={30} height={30} src="/logo-twitter.png" alt="Twitter Icon" /></a>
           {/* <a href="#"><img src="/twitter-icon.png" alt="Facebook Icon" /></a> */}
         </div>
         
