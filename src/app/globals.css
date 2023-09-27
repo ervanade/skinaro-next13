@@ -62,6 +62,13 @@ body {
   list-style-type: disc;
   padding-left: 20px;
 }
+.product .description ul {
+  list-style-type: disc;
+}
+
+.product .description ul li span {
+  font-size: 14px;
+}
 
 .arotea .description ul li {
   color: #3b3a3a;
