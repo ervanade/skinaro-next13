@@ -15,7 +15,7 @@ const Benefit = ({ data }) => {
         <div className="flex flex-col gap-3 sm:gap-6 w-full">
           <div className="description flex flex-col gap-2 sm:gap-4">
             <h2 className="text-black font-luxyna  text-xl sm:text-3xl">
-              {data[1].title || "Benefits using Aro Tea"}
+              {data[1].title || "The Benefits using Aro Tea"}
             </h2>
             <div className="text-[#5C5858] font-light text-sm sm:text-base sm:pr-12">
               {parse(data[1].content) || "Aro Tea has antioxidants that help remove toxins from your body, and start the healing process. Applying antioxidant rich products helps to protect our skin cells from damage and maintain healthy, smooth, and supple skin."}
