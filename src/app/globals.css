@@ -64,6 +64,7 @@ body {
 }
 .product .description ul {
   list-style-type: disc;
+  padding-left: 20px;
 }
 
 .product .description ul li span {
