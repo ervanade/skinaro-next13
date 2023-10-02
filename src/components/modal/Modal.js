@@ -17,7 +17,7 @@ const Modal = ({ data }) => {
         } `}
         onClick={() => setOpenModal(false)}
       ></div>
-      <div className="modal-wrapper transition-all duration-300 w-full max-w-[320px] md:max-w-md p-6 h-max relative flex items-center justify-center z-10">
+      <div className="modal-wrapper transition-all duration-300 w-full max-w-[400px] md:max-w-md p-6 h-max relative flex items-center justify-center z-10">
         <div
           className="close-button absolute text-orange-500 right-1 top-2 cursor-pointer"
           onClick={() => setOpenModal(false)}
