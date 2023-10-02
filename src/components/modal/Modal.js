@@ -17,17 +17,22 @@ const Modal = ({ data }) => {
         } `}
         onClick={() => setOpenModal(false)}
       ></div>
-      <div className="modal-wrapper transition-all duration-300 w-full max-w-lg bg-white p-6 h-max relative flex items-center justify-center shadow-md rounded-lg z-10">
+      <div className="modal-wrapper transition-all duration-300 w-full max-w-[320px] md:max-w-md p-6 h-max relative flex items-center justify-center z-10">
         <div
           className="close-button absolute text-orange-500 right-1 top-2 cursor-pointer"
           onClick={() => setOpenModal(false)}
         >
-          <AiFillCloseCircle className="text-2xl" />
+          <AiFillCloseCircle className="text-2xl bg-white rounded-full" />
         </div>
         {/* <div className="image-wrapper w-full h-full flex items-center justify-center cursor-pointer relative">
                     <img src={`${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[0].image_popup}` || "/assets/hero/hero-bg-4.png"} alt="Popup Skinaro" className='w-full' />
-                </div> */}
-        <div className="image-wrapper w-full h-[200px] md:h-[230px] flex items-center justify-center cursor-pointer relative">
+                  </div> */}
+
+        <div className="image-wrapper w-full aspect-[1.5] flex items-center justify-center cursor-pointer relative shadow-md rounded-lg">
+                  <a
+                     href="https://shopee.co.id/skinaroofficial"
+                     target="_blank"
+                   >
           <Image
             src={
               `${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[0].image_popup}` ||
@@ -35,8 +40,9 @@ const Modal = ({ data }) => {
             }
             alt="Popup Skinaro"
             fill
-            className="w-full h-auto object-contain"
-          />
+            className="w-full h-auto object-contain shadow-md rounded-lg"
+            />
+            </a>
         </div>
       </div>
     </div>

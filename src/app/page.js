@@ -55,7 +55,7 @@ export default async function Home() {
 
       {/* Section Benefit */}
       <div className="points-skinaro w-full flex flex-wrap justify-center items-center py-8 lg:my-16 container mx-auto max-w-7xl gap-12 bg-cover bg-no-repeat">
-        <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
+        {/* <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
         <Image src="/assets/Icon/Icon-1.png" alt="Skinaro Ingridients" fill sizes="100vw" className="w-full h-auto object-contain" />
         </div>
         <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
@@ -66,6 +66,21 @@ export default async function Home() {
         </div>
         <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
         <Image src="/assets/Icon/Icon-5.png" alt="Skinaro Ingridients" fill sizes="100vw" className="w-full h-auto object-contain" />
+        </div> */}
+        <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
+        <Image src="/assets/Icon/icon-7.png" alt="Skinaro Ingridients" fill sizes="100vw" className="w-full h-auto object-contain" />
+        </div>
+        <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
+        <Image src="/assets/Icon/icon-8.png" alt="Skinaro Ingridients" fill sizes="100vw" className="w-full h-auto object-contain" />
+        </div>
+        <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
+        <Image src="/assets/Icon/icon-9.png" alt="Skinaro Ingridients" fill sizes="100vw" className="w-full h-auto object-contain" />
+        </div>
+        <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
+        <Image src="/assets/Icon/icon-10.png" alt="Skinaro Ingridients" fill sizes="100vw" className="w-full h-auto object-contain" />
+        </div>
+        <div className='w-full aspect-square relative max-w-[125px] sm:max-w-[150px]'>
+        <Image src="/assets/Icon/icon-11.png" alt="Skinaro Ingridients" fill sizes="100vw" className="w-full h-auto object-contain" />
         </div>
         {/* <img src="assets/Icon/Icon-1.png" alt="Skinaro Ingridients" className="w-2/6 sm:w-auto sm:max-w-[150px] " />
         <img src="assets/Icon/Icon-2.png" alt="Skinaro Ingridients" className="w-2/6 sm:w-auto sm:max-w-[150px]" />
