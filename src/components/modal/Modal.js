@@ -36,7 +36,7 @@ const Modal = ({ data }) => {
           <Image
             src={
               `${process.env.NEXT_PUBLIC_APP_API_PUBLIC}/${data[0].image_popup}` ||
-              "/assets/hero/hero-bg-4.png"
+              "/assets/popup.jpg"
             }
             alt="Popup Skinaro"
             fill
