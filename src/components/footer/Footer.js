@@ -46,7 +46,7 @@ const Footer = ({data}) => {
         <h2 className="tracking-[2px] mb-3 font-luxyna text-xl">Subscribe Newsletter</h2>
         <div className="socmed flex gap-0">
           <input type="text" className="focus:outline-none px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 text-sm rounded-tl-lg rounded-bl-lg focus:ring-green-800 focus:border-greenring-green-800 block w-full p-2.5 " placeholder="Type Your Email Here" />
-          <a href="send" className="px-4 py-3 bg-[#f36549] hover:bg-white hover:text-[#f36549] transition-all duration-200">
+          <a href="/" className="px-4 py-3 bg-[#f36549] hover:bg-white hover:text-[#f36549] transition-all duration-200">
             Send
           </a>
         </div>
