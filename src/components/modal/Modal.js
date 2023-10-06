@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 
-const Modal = ({ data }) => {
+const Modal = ({ data, link }) => {
   const [openModal, setOpenModal] = useState(true);
   return (
     <div
@@ -30,7 +30,7 @@ const Modal = ({ data }) => {
 
         <div className="image-wrapper w-full aspect-[1.5] flex items-center justify-center cursor-pointer relative shadow-md rounded-lg">
                   <a
-                     href="https://shopee.co.id/skinaroofficial"
+                     href={link?.shopee || "https://shopee.co.id/skinaroofficial"}
                      target="_blank"
                    >
           <Image
