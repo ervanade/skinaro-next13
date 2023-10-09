@@ -10,8 +10,8 @@ const agent = new https.Agent({
 
 
 export const metadata = {
-  title: 'Skinaro - Beauty Aro Tea Skin Care',
-  description: 'Skinaro - Beauty Aro Tea Skin Care dengan kandungan Ekstrak Teh & Glycolic Acid yang dapat membantu mencerahkan dan membersihkan wajah',
+  title: 'Skinaro - Your Skin TEArapy',
+  description: 'Skinaro - Your Skin TEArapy, Brightens your skin with our Kayu Aro Black Tea, Cerahkan kulit Anda dengan Teh Hitam Kayu Aro kami, skincare skinaro',
   keywords: ['Skinaro', 'Skincare', 'Beauty'],
   applicationName: 'Skinaro',
   authors: [{ name: 'CPXi Asia' }, { name: 'CPXi Asia', url: 'https://skinaro.id' }],
@@ -26,8 +26,8 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'Next.js',
-    description: 'Skinaro - Beauty Aro Tea Skin Care dengan kandungan Ekstrak Teh & Glycolic Acid yang dapat membantu mencerahkan dan membersihkan wajah',
+    title: 'Skinaro - Your Skin TEArapy',
+    description: 'Skinaro - Your Skin TEArapy, Brightens your skin with our Kayu Aro Black Tea, Cerahkan kulit Anda dengan Teh Hitam Kayu Aro kami, skincare skinaro',
     url: 'https://skinaro.id',
     siteName: 'Skinaro',
     images: [
